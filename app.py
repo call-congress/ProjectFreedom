@@ -17,7 +17,7 @@ def home():
 @app.route("/data/",methods = ['POST','GET'])
 def data():
     if request.method == "POST":
-        key = "AIzaSyADr0eoKKdN-s2jjUXwHTpAOthlOs7JfQw"
+        key = ""
 
         url = "https://www.googleapis.com/civicinfo/v2/representatives"
 
