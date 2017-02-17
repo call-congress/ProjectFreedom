@@ -1,0 +1,5 @@
+XSym
+0058
+94a35b7b51dc77ddc0e45841a7450896
+/Users/michaelthomas/anaconda/lib/python3.5/sre_compile.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

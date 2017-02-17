@@ -1,0 +1,5 @@
+XSym
+0055
+37fc07e7def64fdd6b78cf3258913042
+/Users/michaelthomas/anaconda/lib/python3.5/operator.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

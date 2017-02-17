@@ -1,0 +1,5 @@
+XSym
+0054
+ddd703fe524aa12fa5e83216d323f4d3
+/Users/michaelthomas/anaconda/lib/python3.5/copyreg.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

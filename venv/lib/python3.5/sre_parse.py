@@ -1,0 +1,5 @@
+XSym
+0056
+abc13dbf38a0630eb4ccdb5ad1d7d2b0
+/Users/michaelthomas/anaconda/lib/python3.5/sre_parse.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

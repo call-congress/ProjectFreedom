@@ -1,0 +1,5 @@
+XSym
+0058
+1b6d1da4687daaf9de4a06fd54451a6a
+/Users/michaelthomas/anaconda/lib/python3.5/_weakrefset.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

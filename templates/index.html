@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Call Congress</title>
+	<link rel="stylesheet" href="{{url_for('static',filename = 'main.css')}}">
+	<link rel="icon" type="image/png" href="../static/img/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="stripe"> </div>
+	<div class="content">
+		<h1 class="cover">Call Congress</h1>
+
+		<div class="white-box-upper first-box">
+			<h2>TIPS ON CALLING</h2>
+
+			<p>
+				<ol>
+					<li>*Calling local offices is important and sometimes better than the DC office.*</li>
+					<li>Leave a message if you can’t speak to somebody</li>
+					<li>If all inboxes are full/phone lines down, send an email, then call back another day!</li>
+				</ol>
+			</p>
+
+			<h2>HOW TO CALL EFFECTIVELY</h2>
+
+			<p>
+				<ol>
+					<li>**MAKE SURE TO LEAVE YOUR NAME AND ADDRESS (ESPECIALLY ZIP CODE)**  Letting the rep know you are a constituent is very important. Calls might/probably will be disregarded if you are not a constituent. Each office tallies the number of calls they get about an issue for the Senator/Rep to consider in making their decisions. (so your call matters a lot!!!)</li>
+					<li>Name the issue you are talking about</li>
+					<li>Tell the representative/senator what you want them to do (vote yes/no, support this, block this, etc.)</li>
+					<li>Briefly explain why you are calling about the issue</li>
+				</ol>
+			</p>
+
+			<a href="#" class="link">More info and useful links</a>
+
+		</div>
+
+		<div class="two boxes">
+			<div class="left">
+				<h2 class="cover">Phone Numbers</h2>
+				<div class="address">
+					<form action="{{url_for('data')}}" method="POST">
+					  <input type="text" name="street_address" placeholder="Street Adress #70 Forest Rd, Tenafly, NJ" id="address">
+					 <input type="submit" value="Submit" id="submit">
+					</form>
+				</div>
+				<div class="white-box-lower">
+					<table class="numbers" cellpadding="10">
+						<tr><th colspan="2">Senator Name 1</th></tr>
+						<tr>
+							<td class="office">Office 1</td>
+							<td>(201) 956-2339</td>
+						</tr>
+						<tr>
+							<td class="office">Office 2</td>
+							<td>Phone 2</td>
+						</tr>
+						<th colspan="2">Senator Name 2</th>
+						<tr>
+							<td class="office">Office 1</td>
+							<td>Phone 1</td>
+						</tr>
+						<tr>
+							<td>Office 2</td>
+							<td>Phone 2</td>
+						</tr>
+						<tr>
+							<td class="office">Office 3</td>
+							<td>Phone 3</td>
+						</tr>
+						<tr>
+							<td class="office">Office 4</td>
+							<td>Phone 4</td>
+						</tr>
+						<th colspan="2">House Representative</th>
+						<tr>
+							<td>Office 1</td>
+							<td>Phone 1</td>
+						</tr>
+						<tr>
+							<td>Office 2</td>
+							<td>Phone 2</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="right">
+				<h2 class="cover">Issues</h2>
+					<div class="address">
+						<select name="questions" id="faq-questions" class="dropdown">
+						    <option>Issues</option>
+						    <option value="1">NEIL GORSUCH</option>
+						    <option value="2">IMMIGRATION</option>
+						    <option value="3">Question 3</option>
+						    <option value="4">Question 4</option>
+						</select>
+						<div class="white-box-lower">
+							<div class="answer hide" id="answer1">
+							    <p>“I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. Not only would Judge Gorsuch undermine countless laws, including those that protect the environment, workers' rights, women’s rights and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.”</p>
+
+							    <hr>
+							    <p>“I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. Not only would Judge Gorsuch undermine countless laws, including those that protect the environment, workers' rights, women’s rights and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.”</p>
+							</div>
+							<div class="answer hide" id="answer2">
+							    <p>“I support refugee resettlement in the U.S. I am strongly opposed to the announcement from President Trump that would slash refugee admissions, grind all resettlement to a halt, stop resettling refugees from certain countries, and preference religious minorities. This discriminatory announcement flies in the face of core American values and this country’s founding principles. It does not reflect the welcome for refugees I see in my community every day. Please urge President Trump to abandon this plan and do everything in your power to stop this.”</p>
+							</div>
+							<div class="answer hide" id="answer3">
+							    <p>Answer 3 content</p>
+							</div>
+							<div class="answer hide" id="answer4">
+							    <p>Answer 4 content</p>
+							</div>
+						</div>
+					</div>
+				
+				
+			</div>
+		</div> <!--two-boxes-->
+
+		
+
+	</div><!--content-->
+
+		
+
+	<script>
+	$(document).ready(function(){
+		$('#faq-questions').on('change', function(){
+	        var theVal = $(this).val();
+	        $('.answer').addClass('hide');
+	    	$('.answer#answer' + theVal).removeClass('hide');
+	    });
+	});
+	</script>
+
+	<footer class="footer"><a href="#">ABOUT</a> | <a href="#">Legal</a> | <a href="#">Help</a></footer>
+</body>
+</html>
+Contact GitHub API Training Shop Blog About

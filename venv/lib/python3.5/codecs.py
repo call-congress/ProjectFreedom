@@ -1,0 +1,5 @@
+XSym
+0053
+6b7dcca841d5adcc1227fae4ad6fce80
+/Users/michaelthomas/anaconda/lib/python3.5/codecs.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
