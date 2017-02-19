@@ -1,5 +1,0 @@
-XSym
-0052
-53608ecc13894081abfc2ed3c29cbfcc
-/Users/michaelthomas/anaconda/lib/python3.5/heapq.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
