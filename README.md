@@ -19,3 +19,8 @@ virtualenv venv
 # Install python requirements
 pip install -r requirements.txt
 ```
+
++ Run the project using the following command
+```bash
+python app.py
+```
