@@ -6,12 +6,20 @@
 </head>
 
 <body>
-    <b>Senators</b>
-    {{senate_table|safe}}<br />
+    <!-- Still need to work on properly itterating through the data freame -->
 
-   <b>Congress: </b>
-    {{congress_table|safe}}
+    <table>
+    <caption>Congress Info for Alabama</caption>
+    <tbody>
+    {%for k, v in senator_table.items()%}
+       <tr>
+           <td>{{v[0]|safe}}</td>
+       </tr>
+    {%endfor%}
+    </tbody>
+</table>
 
+    {{sen.to_html(columns=[2])|safe}}
 
 </body>
 </html>
