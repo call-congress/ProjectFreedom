@@ -1,5 +1,0 @@
-XSym
-0054
-d54359541f4c8b7b38e68f3d43e6c6fc
-/Users/michaelthomas/anaconda/lib/python3.5/weakref.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

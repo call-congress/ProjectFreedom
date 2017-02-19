@@ -1,5 +1,0 @@
-XSym
-0054
-763cb728bc32e71cd262d5c2d8c68eaf
-/Users/michaelthomas/anaconda/lib/python3.5/keyword.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

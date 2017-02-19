@@ -1,5 +1,0 @@
-XSym
-0060
-5b8060eb7a9bac85aa5a54dfddb7c55c
-/Users/michaelthomas/anaconda/lib/python3.5/sre_constants.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   

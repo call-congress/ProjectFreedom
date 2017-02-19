@@ -1,5 +1,0 @@
-XSym
-0054
-f91a0fc56db7630bd8fb129ad202ac47
-/Users/michaelthomas/anaconda/lib/python3.5/fnmatch.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

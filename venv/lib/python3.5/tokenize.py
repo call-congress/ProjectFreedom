@@ -1,5 +1,0 @@
-XSym
-0055
-3e20079e270d9423bb69a75738d261b3
-/Users/michaelthomas/anaconda/lib/python3.5/tokenize.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

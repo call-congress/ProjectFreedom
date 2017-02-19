@@ -1,5 +1,0 @@
-XSym
-0055
-fdfb66c53792b50ee41cbdfa0b2274c8
-/Users/michaelthomas/anaconda/lib/python3.5/warnings.py
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
