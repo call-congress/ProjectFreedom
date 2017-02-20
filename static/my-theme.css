@@ -186,8 +186,20 @@ li.uk-active {
 
 .home-1-title {
   font-size:2em;
+  letter-spacing:2px;
   color:#fff;
-  width:50%;
+  width:55%;
+  margin:0 auto;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+
+}
+
+.home-1-title-text {
+  font-size:1.3em;
+  padding-top:20px;
+  letter-spacing:2px;
+  color:#fff;
+  width:55%;
   margin:0 auto;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 
@@ -231,6 +243,7 @@ li.uk-active {
  background-size: cover;
  padding-top:100px;
  padding-bottom:100px;
+
   
 }
 
@@ -265,25 +278,25 @@ li.uk-active {
  {
    color: #fff;
    text-transform:uppercase;
-   opacity:.5;
+
 }
 
 .address :-moz-placeholder { /* Firefox 18- */
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .address ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .address :-ms-input-placeholder {  
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .make-a-call input {
@@ -305,31 +318,43 @@ li.uk-active {
    color:#ff0000;
 }
 
+.state-dropdown {
+  border:2px solid #fff;
+  background-color:transparent;
+  color:#fff;
+  width:150px;
+  height:38px;
+}
+
+.state-dropdown:focus {
+  outline:none;
+}
+
 /* Blue */
 
 .address-bottom input:focus {
     outline: none;
-    color:#ff0000;
+    color:#fff;
 }
 
 .address-bottom ::-webkit-input-placeholder
  {
-   color: #ff0000;
+   color: #fff;
    text-transform:uppercase;
 }
 
 .address-bottom :-moz-placeholder { /* Firefox 18- */
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
 .address-bottom ::-moz-placeholder {  /* Firefox 19+ */
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
 .address-bottom :-ms-input-placeholder {  
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
@@ -354,8 +379,8 @@ li.uk-active {
 }
 
 .address-bottom input {
-  background-color:#fff;
-  border:2px solid #eee;
+  background-color:transparent;
+  border:2px solid #fff;
   border-radius:5px;
   width:33%;
   line-height:2em;
@@ -482,3 +507,6 @@ ol li:before {
 [class*='uk-align'] {
   margin-bottom:0;
 }
+
+/* ------------- MEDIA QUERIES ------------- */
+
