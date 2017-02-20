@@ -30,15 +30,16 @@ h2 {
   color:#494949;
   font-size:2em;
   letter-spacing:2px;
+  text-align:left;
 }
 
 h3 {
   font-weight:bold;
   color:#494949;
-  font-size:1.3em;
+  font-size:1.1em;
   letter-spacing:3px;
   text-transform:uppercase;
-
+  margin-top:20px;
 }
 
 h3.underline {
@@ -52,6 +53,7 @@ h4 {
 }
 
 .heading {
+  padding-bottom:40px;
 
 }
 
@@ -201,6 +203,8 @@ li.uk-active {
 
 .uk-card-body {
   background-color:#fff;
+  text-align:left;
+  font-size:.9em;
 }
 
 .are-you-ready {
@@ -215,17 +219,23 @@ li.uk-active {
 
 .home-2 {
   background-color:#fff;
-  padding-bottom:150px;
   text-align:center;
-  padding-top:75px;
+  padding-top:50px;
 }
 
 .home-2-bottom {
+  background:url("../static/images/bg.png") no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ padding-top:100px;
+ padding-bottom:100px;
   
 }
 
 .help-text {
-  width:40%;
+  width:60%;
   margin:0 auto;
   font-size:1.2em;
 }
@@ -349,8 +359,8 @@ li.uk-active {
   border-radius:5px;
   width:33%;
   line-height:2em;
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top:40px;
+  margin-bottom:30px;
   padding:6px;
   padding-left:10px;
   z-index:2;
@@ -455,4 +465,20 @@ ol li:before {
 
 .issue-boxes {
   padding-top:20px;
+}
+
+.no-margin-top {
+  margin-top:0!important;
+}
+
+.uk-card-body img {
+  width:60px;
+}
+
+.uk-card {
+  padding-top:0;
+}
+
+[class*='uk-align'] {
+  margin-bottom:0;
 }
