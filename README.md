@@ -13,8 +13,8 @@ git clone git@github.com:[your username]/ProjectFreedom.git
 # Initialize virtual environment for the project
 virtualenv venv
 
-# Activate virtualenv
-. venv/bin/activate
+# Activate virtualenv with mac os
+$ source venv/bin/activate
 
 # Install python requirements
 pip install -r requirements.txt
