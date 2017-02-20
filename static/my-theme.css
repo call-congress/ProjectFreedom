@@ -3,24 +3,24 @@
 
 @font-face {
   font-family: 'Avenir';
-  src: url('../../dist/fonts/Avenir-Light.eot'); /* IE9 Compat Modes */
-  src: url('../../dist/fonts/Avenir-Light.eot') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../dist/fonts/Avenir-Light.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../../dist/fonts/Avenir-Light.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../dist/fonts/Avenir-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../../dist/fonts/Avenir-Light.svg') format('svg'); /* Legacy iOS */
+  src: url('../static/fonts/Avenir-Light.eot'); /* IE9 Compat Modes */
+  src: url('../static/fonts/Avenir-Light.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('../static/fonts/Avenir-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../static/fonts/Avenir-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../static/fonts/Avenir-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../static/fonts/Avenir-Light.svg') format('svg'); /* Legacy iOS */
 font-weight: normal;
 font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir';
-  src: url('../../dist/fonts/Avenir-Heavy.eot'); /* IE9 Compat Modes */
-  src: url('../../dist/fonts/Avenir-Heavy.eot') format('embedded-opentype'), /* IE6-IE8 */
-       url('../../dist/fonts/Avenir-Heavy.woff') format('woff2'), /* Super Modern Browsers */
-       url('../../dist/fonts/Avenir-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../../dist/fonts/Avenir-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../../dist/fonts/Avenir-Heavy.svg') format('svg'); /* Legacy iOS */
+  src: url('../static/fonts/Avenir-Heavy.eot'); /* IE9 Compat Modes */
+  src: url('../static/fonts/Avenir-Heavy.eot') format('embedded-opentype'), /* IE6-IE8 */
+       url('../static/fonts/Avenir-Heavy.woff') format('woff2'), /* Super Modern Browsers */
+       url('../static/fonts/Avenir-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../static/fonts/Avenir-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../static/fonts/Avenir-Heavy.svg') format('svg'); /* Legacy iOS */
 font-weight: bold;
 font-style: bold;
 }
@@ -65,7 +65,7 @@ hr {
 /* ------------- CONTAINER DIVS ------------- */
 
 body {
- background:url("../../dist/images/bg.png") no-repeat center center fixed; 
+ background:url("../static/images/bg.png") no-repeat center center fixed; 
  -webkit-background-size: cover;
  -moz-background-size: cover;
  -o-background-size: cover;
