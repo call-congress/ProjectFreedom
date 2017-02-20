@@ -4,140 +4,126 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Call Congress</title>
-	<link rel="stylesheet" href="{{url_for('static',filename = 'main.css')}}">
-	<link rel="icon" type="image/png" href="../static/img/favicon.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/uikit.css">
+	<link rel="stylesheet" type="text/css" href="../static/my-theme.css">
+	<link rel="icon" type="image/png" href="../static/images/favicon.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="../static/uikit.min.js"></script>
+
 </head>
 <body>
-	<div class="stripe"> </div>
+	<div class="stripe"></div>
+
+	<div class="container">
+
 	<div class="content">
-		<h1 class="cover">Call Congress</h1>
 
-		<div class="white-box-upper first-box">
-			<h2>TIPS ON CALLING</h2>
+		<div class="uk-container">
+			<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+				<a href="" class="uk-navbar-item uk-logo"><img src="../static/images/logo.png"></a>
+			    <div class="uk-navbar-right">
+			        <ul class="uk-navbar-nav">
+			            <li class="uk-parent"><a href="#call" data-uk-smooth-scroll><div class="underline">Why Call?</div></a></li>
+			            <li class="uk-parent"><a href="html/events/"><div class="underline">Upcoming Events</div></a></li>
+			            <li class="uk-parent"><a href="html/contact/"><div class="underline">About</div></a></li>
+			        </ul>
+			    </div>
+		    </nav>
+	    </div><!--navbar-->
 
-			<p>
-				<ol>
-					<li>*Calling local offices is important and sometimes better than the DC office.*</li>
-					<li>Leave a message if you can’t speak to somebody</li>
-					<li>If all inboxes are full/phone lines down, send an email, then call back another day!</li>
-				</ol>
-			</p>
-
-			<h2>HOW TO CALL EFFECTIVELY</h2>
-
-			<p>
-				<ol>
-					<li>**MAKE SURE TO LEAVE YOUR NAME AND ADDRESS (ESPECIALLY ZIP CODE)**  Letting the rep know you are a constituent is very important. Calls might/probably will be disregarded if you are not a constituent. Each office tallies the number of calls they get about an issue for the Senator/Rep to consider in making their decisions. (so your call matters a lot!!!)</li>
-					<li>Name the issue you are talking about</li>
-					<li>Tell the representative/senator what you want them to do (vote yes/no, support this, block this, etc.)</li>
-					<li>Briefly explain why you are calling about the issue</li>
-				</ol>
-			</p>
-
-			<a href="#" class="link">More info and useful links</a>
-
-		</div>
-
-		<div class="two boxes">
-			<div class="left">
-				<h2 class="cover">Phone Numbers</h2>
-				<div class="address">
-					<form action="{{url_for('data')}}" method="POST">
-					  <input type="text" name="street_address" placeholder="Street Adress #70 Forest Rd, Tenafly, NJ" id="address">
-					 <input type="submit" value="Submit" id="submit">
-					</form>
-				</div>
-				<div class="white-box-lower">
-					<table class="numbers" cellpadding="10">
-						<tr><th colspan="2">Senator Name 1</th></tr>
-						<tr>
-							<td class="office">Office 1</td>
-							<td>(201) 956-2339</td>
-						</tr>
-						<tr>
-							<td class="office">Office 2</td>
-							<td>Phone 2</td>
-						</tr>
-						<th colspan="2">Senator Name 2</th>
-						<tr>
-							<td class="office">Office 1</td>
-							<td>Phone 1</td>
-						</tr>
-						<tr>
-							<td>Office 2</td>
-							<td>Phone 2</td>
-						</tr>
-						<tr>
-							<td class="office">Office 3</td>
-							<td>Phone 3</td>
-						</tr>
-						<tr>
-							<td class="office">Office 4</td>
-							<td>Phone 4</td>
-						</tr>
-						<th colspan="2">House Representative</th>
-						<tr>
-							<td>Office 1</td>
-							<td>Phone 1</td>
-						</tr>
-						<tr>
-							<td>Office 2</td>
-							<td>Phone 2</td>
-						</tr>
-					</table>
-				</div>
+		<div class="home-1">
+			<div class="home-1-title">
+			Don't let lawmakers make decisions on your behalf without making your voice heard.
 			</div>
-			<div class="right">
-				<h2 class="cover">Issues</h2>
-					<div class="address">
-						<select name="questions" id="faq-questions" class="dropdown">
-						    <option>Issues</option>
-						    <option value="1">NEIL GORSUCH</option>
-						    <option value="2">IMMIGRATION</option>
-						    <option value="3">Question 3</option>
-						    <option value="4">Question 4</option>
-						</select>
-						<div class="white-box-lower">
-							<div class="answer hide" id="answer1">
-							    <p>“I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. Not only would Judge Gorsuch undermine countless laws, including those that protect the environment, workers' rights, women’s rights and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.”</p>
 
-							    <hr>
-							    <p>“I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. Not only would Judge Gorsuch undermine countless laws, including those that protect the environment, workers' rights, women’s rights and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.”</p>
-							</div>
-							<div class="answer hide" id="answer2">
-							    <p>“I support refugee resettlement in the U.S. I am strongly opposed to the announcement from President Trump that would slash refugee admissions, grind all resettlement to a halt, stop resettling refugees from certain countries, and preference religious minorities. This discriminatory announcement flies in the face of core American values and this country’s founding principles. It does not reflect the welcome for refugees I see in my community every day. Please urge President Trump to abandon this plan and do everything in your power to stop this.”</p>
-							</div>
-							<div class="answer hide" id="answer3">
-							    <p>Answer 3 content</p>
-							</div>
-							<div class="answer hide" id="answer4">
-							    <p>Answer 4 content</p>
-							</div>
-						</div>
-					</div>
+			<div class="address"><form><input type="text" name="firstname" placeholder="enter your address"></form></div>
+			<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+		</div><!--Home1-->
+		
+		<div class="home-2">
+		<a name="call"></a>
+			<div class="uk-container uk-align-center uk-width-5-6">
+				<h2 class="heading">Why Call?</h2>
+				<div class="uk-child-width-expand@s" uk-grid>
+				    <div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/1.png">
+				        <h3>Power in Numbers</h3>
+				        <p>Congressional offices tally the number of calls they get about an issue, and pass the information along to representatives to consider. When there’s a large volume of calls about an issue, they’re forced to take a stand and respond.</p></div>
+				    </div>
+				    <div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/2.png">
+				        <h3>Know Where Your Rep Stands</h3> <p>Make sure to know where your representative stands on issues and call effectively based on those stances. If they haven't taken a stand, you can let them know you expect them to.</p></div>
+				    </div>
+				    <div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/3.png">
+				        <h3>Reps Work for You</h3>
+				        <p>It is in the legislator's best interest to accurately represent his or her base because they want to remain in office. Making your voice heard applies pressure for action.</p></div>
+				    </div>
+				</div>
+				<div class="uk-child-width-expand@s no-margin-top uk-text-center" uk-grid>
+					<div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/4.png">
+				        <h3>Beyond the Votes</h3> <p>Voting on an issue is the least of what a legislator can do. If a Rep sees their base advocating strongly for an issue, it incentivizes them to advocate for it publicly and within their chamber, or they can even ask for a bill not to be brought up at all.</p></div>
+				    </div>
+				     <div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/5.png">
+				        <h3>Don't Assume</h3>
+				        <p>While democratic representatives usually stand for liberal issues, it’s not a good idea to expect them to always vote along party lines. If a rep thinks their constituency doesn’t care about an issue, they can become complacent and waiver support.</p></div>
+				    </div>
+				    <div>
+				        <div class="uk-card uk-card-default uk-card-body">
+				        <img src="../static/images/6.png">
+				        <h3>The Bottom Line</h3>
+				        <p>If you have a strong opinion about an issue, it’s extremely important to voice it, no matter what your rep’s position may be. Make sure to let them know we’ll be watching their vote.</p></div>
+				    </div>
+
+				</div>
+
 				
-				
+					
+				 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+
+				   
+				    
+				</div>
+
 			</div>
-		</div> <!--two-boxes-->
+			<div class="home-2-bottom">
+				<div class="address-bottom">
+				<div class="help-text home-1-title">Enter your address to begin. We provide you with the phone numbers of your representatives, and what to say about different issues during your call.</div>
+					<form><input type="text" name="firstname" placeholder="enter your address"></form>
+				
+				</div>
+				<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+			</div><!--home-2-bottom-->
+		</div><!--home2-->
+    
+    <footer><a href="#">Contact</a> | <a href="#">Legal</a> | <a href="#">Questions?</a>
+    </footer>
+    </div><!--container-->
+    </div><!--content-->
 
-		
+   <script>
+   	$('a[href*="#"]:not([href="#"])').click(function() {
+   		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+   			var target = $(this.hash);
+   			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+   			if (target.length) {
+   				$('html, body').animate({
+   					scrollTop: target.offset().top
+   				}, 1000);
+   				return false;
+   			}
+   		}
+   	});
+   </script>
 
-	</div><!--content-->
 
-		
-
-	<script>
-	$(document).ready(function(){
-		$('#faq-questions').on('change', function(){
-	        var theVal = $(this).val();
-	        $('.answer').addClass('hide');
-	    	$('.answer#answer' + theVal).removeClass('hide');
-	    });
-	});
-	</script>
-
-	<footer class="footer"><a href="#">ABOUT</a> | <a href="#">Legal</a> | <a href="#">Help</a></footer>
+	
 </body>
 </html>
-Contact GitHub API Training Shop Blog About
