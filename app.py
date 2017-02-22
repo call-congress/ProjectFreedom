@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request
+from flask import Flask, render_template, request
 import requests
 import pandas as pd
 import re
@@ -17,13 +17,12 @@ def home():
 
 @app.route("/data/",methods = ['POST','GET'])
 def data():
-    # I know this should probably be a get request... ill look into it.
     if request.method == "POST":
-        key = ""
+        key = "AIzaSyADr0eoKKdN-s2jjUXwHTpAOthlOs7JfQw"
         url = "https://www.googleapis.com/civicinfo/v2/representatives"
 
-        address = request.form['street_address']
-        state = request.form['state']
+        address = request.form['firstname']
+        state = "NJ"
 
         legislative = "country"
 
@@ -44,34 +43,35 @@ def data():
         district = str(district)
         district_num = re.findall('\d', district)
         district_num = [''.join(district_num)]
+        district_int = int(district_num[0])
 
         #Load data from excel sheet rubs is building
         senator_table = pd.read_excel("Congress reps doc.xlsx")
-        congress_table = pd.read_excel("Congress reps doc.xlsx", sheetname=1)
+        house_table = pd.read_excel("Congress reps doc.xlsx", sheetname=1)
 
 
 
-        congress_column = congress_table.columns
+        house_column = house_table.columns
         senate_column = senator_table.columns
 
-        congress_df = pd.DataFrame(data=congress_table,columns=congress_column)
+        house_df = pd.DataFrame(data=house_table,columns= house_column)
         senator_df = pd.DataFrame(data=senator_table,columns=senate_column)
 
-        congress_df.set_index("STATE",inplace=True)
-        senator_df.set_index("STATE",inplace=True)
+
 
         #Create a sub dataframe to itterate through based on state
         #Helps deal with different column numbers for different amount
         #of phone numbers
 
         senate_by_state_df = senator_df[senator_df["STATE"] == 'Alabama']
+        house_df_by_state = house_df[(house_df["STATE"] == state) & (house_df["DISTRICT NUMBER"] == district_int)]
 
-        senate_by_state_dic = senate_by_state_df.to_dict()
 
+        lis = house_df_by_state.to_dict(orient="split")
+        data = lis['data'][0]
+        final = data[4:]
 
-        return render_template("data.html", senator_table = senate_by_state_dic,
-                               congress_table = congress_df.to_dict(), state = state, sen = senate_by_state_df)
-
+    return render_template("/scripts/index.html", house = final , senate = senate_by_state_df)
 
 
 
