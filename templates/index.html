@@ -26,17 +26,102 @@
 			            <li class="uk-parent"><a href="#call" data-uk-smooth-scroll><div class="underline">Why Call?</div></a></li>
 			            <li class="uk-parent"><a href="html/events/"><div class="underline">Upcoming Events</div></a></li>
 			            <li class="uk-parent"><a href="html/contact/"><div class="underline">About</div></a></li>
+
 			        </ul>
+
+			     
 			    </div>
 		    </nav>
+
+		    <div class="button_container" id="toggle">
+			  <span class="top"></span>
+			  <span class="middle"></span>
+			  <span class="bottom"></span>
+			</div>
+
+			<div class="overlay" id="overlay">
+			  <nav class="overlay-menu">
+			    <ul>
+			      <li ><a href="#">Home</a></li>
+			      <li><a href="#">About</a></li>
+			      <li><a href="#">Work</a></li>
+			      <li><a href="#">Contact</a></li>
+			    </ul>
+			  </nav>
+			</div>
+
+		    <div id="my-id" class="uk-offcanvas">
+    ...
+</div>
 	    </div><!--navbar-->
+
 
 		<div class="home-1">
 			<div class="home-1-title">
 			Don't let lawmakers make decisions on your behalf without making your voice heard.
 			</div>
 
+			<div class="address"><form><input type="text" name="firstname" placeholder="enter your address">
+
+				<select class="state-dropdown">
+					<option>CHOOSE A STATE</option>
+					<option value="AL">Alabama</option>
+					<option value="AK">Alaska</option>
+					<option value="AZ">Arizona</option>
+					<option value="AR">Arkansas</option>
+					<option value="CA">California</option>
+					<option value="CO">Colorado</option>
+					<option value="CT">Connecticut</option>
+					<option value="DE">Delaware</option>
+					<option value="DC">District Of Columbia</option>
+					<option value="FL">Florida</option>
+					<option value="GA">Georgia</option>
+					<option value="HI">Hawaii</option>
+					<option value="ID">Idaho</option>
+					<option value="IL">Illinois</option>
+					<option value="IN">Indiana</option>
+					<option value="IA">Iowa</option>
+					<option value="KS">Kansas</option>
+					<option value="KY">Kentucky</option>
+					<option value="LA">Louisiana</option>
+					<option value="ME">Maine</option>
+					<option value="MD">Maryland</option>
+					<option value="MA">Massachusetts</option>
+					<option value="MI">Michigan</option>
+					<option value="MN">Minnesota</option>
+					<option value="MS">Mississippi</option>
+					<option value="MO">Missouri</option>
+					<option value="MT">Montana</option>
+					<option value="NE">Nebraska</option>
+					<option value="NV">Nevada</option>
+					<option value="NH">New Hampshire</option>
+					<option value="NJ">New Jersey</option>
+					<option value="NM">New Mexico</option>
+					<option value="NY">New York</option>
+					<option value="NC">North Carolina</option>
+					<option value="ND">North Dakota</option>
+					<option value="OH">Ohio</option>
+					<option value="OK">Oklahoma</option>
+					<option value="OR">Oregon</option>
+					<option value="PA">Pennsylvania</option>
+					<option value="RI">Rhode Island</option>
+					<option value="SC">South Carolina</option>
+					<option value="SD">South Dakota</option>
+					<option value="TN">Tennessee</option>
+					<option value="TX">Texas</option>
+					<option value="UT">Utah</option>
+					<option value="VT">Vermont</option>
+					<option value="VA">Virginia</option>
+					<option value="WA">Washington</option>
+					<option value="WV">West Virginia</option>
+					<option value="WI">Wisconsin</option>
+					<option value="WY">Wyoming</option>
+				</select>
+				</form>
+			</div>
+
 			<div class="address"><form action = "{{url_for('data')}}" method="post"><input type="text" name="firstname" placeholder="enter your address">
+
 			<div class="make-a-call"><input type="submit" value="Make a Call"></div>
 
 			</form></div>
@@ -70,7 +155,7 @@
 					<div>
 				        <div class="uk-card uk-card-default uk-card-body">
 				        <img src="../static/images/4.png">
-				        <h3>Beyond the Votes</h3> <p>Voting on an issue is the least of what a legislator can do. If a Rep sees their base advocating strongly for an issue, it incentivizes them to advocate for it publicly and within their chamber, or they can even ask for a bill not to be brought up at all.</p></div>
+				        <h3>Beyond the Votes</h3> <p>Voting on an issue is the least of what a legislator can do. If a rep sees their base advocating strongly for an issue, it incentivizes them to advocate for it publicly and within their chamber, or they can even ask for a bill not to be brought up at all.</p></div>
 				    </div>
 				     <div>
 				        <div class="uk-card uk-card-default uk-card-body">
@@ -84,22 +169,71 @@
 				        <h3>The Bottom Line</h3>
 				        <p>If you have a strong opinion about an issue, it’s extremely important to voice it, no matter what your rep’s position may be. Make sure to let them know we’ll be watching their vote.</p></div>
 				    </div>
-
 				</div>
-
-				
-					
 				 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
-
-				   
-				    
-				</div>
+				 </div>
 
 			</div>
 			<div class="home-2-bottom">
-				<div class="address-bottom">
-				<div class="help-text home-1-title">Enter your address to begin. We provide you with the phone numbers of your representatives, and what to say about different issues during your call.</div>
-					<form><input type="text" name="firstname" placeholder="enter your address"></form>
+				<div class="address">
+				<div class="home-title-bottom">Enter your address to begin.</div> 
+					<form><input type="text" name="firstname" placeholder="enter your address">
+
+						<select class="state-dropdown" required>
+							<option>CHOOSE A STATE</option>
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District Of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+					</form>
 				
 				</div>
 				<div class="make-a-call"><input type="submit" value="Make a Call"></div>
