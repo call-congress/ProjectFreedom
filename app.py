@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 import requests
 import pandas as pd
 import re
@@ -22,7 +22,7 @@ def data():
         url = "https://www.googleapis.com/civicinfo/v2/representatives"
 
         address = request.form['firstname']
-        state = "NJ"
+        state = request.form['state']
 
         legislative = "country"
 
@@ -46,8 +46,8 @@ def data():
         district_int = int(district_num[0])
 
         #Load data from excel sheet rubs is building
-        senator_table = pd.read_excel("Congress reps doc.xlsx")
-        house_table = pd.read_excel("Congress reps doc.xlsx", sheetname=1)
+        senator_table = pd.read_excel("data.xlsx")
+        house_table = pd.read_excel("data.xlsx", sheetname=1)
 
 
 
@@ -63,15 +63,21 @@ def data():
         #Helps deal with different column numbers for different amount
         #of phone numbers
 
-        senate_by_state_df = senator_df[senator_df["STATE"] == 'Alabama']
+        senate_by_state_df = senator_df[senator_df["STATE"] == state]
         house_df_by_state = house_df[(house_df["STATE"] == state) & (house_df["DISTRICT NUMBER"] == district_int)]
 
+        house_clean = house_df_by_state.dropna(1)
 
-        lis = house_df_by_state.to_dict(orient="split")
-        data = lis['data'][0]
-        final = data[4:]
+        dic = house_clean.to_dict(orient= "split")
+        liz = dic['data'][0]
+        numbers = liz[4:]
+        district_number = liz[1]
+        rep = liz[2]
+        url = liz[3]
 
-    return render_template("/scripts/index.html", house = final , senate = senate_by_state_df)
+
+    return render_template("/scripts/index.html", numbers = numbers, district = district_number, rep = rep,
+                           url = url)
 
 
 
