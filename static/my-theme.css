@@ -186,8 +186,20 @@ li.uk-active {
 
 .home-1-title {
   font-size:2em;
+  letter-spacing:2px;
   color:#fff;
-  width:50%;
+  width:55%;
+  margin:0 auto;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+
+}
+
+.home-1-title-text {
+  font-size:1.3em;
+  padding-top:20px;
+  letter-spacing:2px;
+  color:#fff;
+  width:55%;
   margin:0 auto;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
 
@@ -195,7 +207,7 @@ li.uk-active {
 
 .home-1 {
   text-align:center;
-  height:65vh;
+  height:450px;
   padding-top:10%;
 }
 
@@ -231,6 +243,7 @@ li.uk-active {
  background-size: cover;
  padding-top:100px;
  padding-bottom:100px;
+
   
 }
 
@@ -265,25 +278,25 @@ li.uk-active {
  {
    color: #fff;
    text-transform:uppercase;
-   opacity:.5;
+
 }
 
 .address :-moz-placeholder { /* Firefox 18- */
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .address ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .address :-ms-input-placeholder {  
    color: #fff;
    text-transform:uppercase;  
-   opacity:.5;
+
 }
 
 .make-a-call input {
@@ -305,31 +318,43 @@ li.uk-active {
    color:#ff0000;
 }
 
+.state-dropdown {
+  border:2px solid #fff;
+  background-color:transparent;
+  color:#fff;
+  width:150px;
+  height:38px;
+}
+
+.state-dropdown:focus {
+  outline:none;
+}
+
 /* Blue */
 
 .address-bottom input:focus {
     outline: none;
-    color:#ff0000;
+    color:#fff;
 }
 
 .address-bottom ::-webkit-input-placeholder
  {
-   color: #ff0000;
+   color: #fff;
    text-transform:uppercase;
 }
 
 .address-bottom :-moz-placeholder { /* Firefox 18- */
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
 .address-bottom ::-moz-placeholder {  /* Firefox 19+ */
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
 .address-bottom :-ms-input-placeholder {  
-    color: #ff0000;
+    color: #fff;
    text-transform:uppercase;  
 }
 
@@ -354,8 +379,8 @@ li.uk-active {
 }
 
 .address-bottom input {
-  background-color:#fff;
-  border:2px solid #eee;
+  background-color:transparent;
+  border:2px solid #fff;
   border-radius:5px;
   width:33%;
   line-height:2em;
@@ -481,4 +506,163 @@ ol li:before {
 
 [class*='uk-align'] {
   margin-bottom:0;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+@media (max-width: 640px) {
+  .uk-grid > * {
+  padding-left:0px;
+  text-align:center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+footer {
+  display:none;
+}
+
+.heading {
+  padding-bottom:15px;
+}
+
+.home-1 {
+  height:100vh;
+  padding-top:15px;
+  text-align:left;
+}
+
+.home-1-title-text, .home-1-title {
+  width:90%;
+  font-weight:bold;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:1.5em;
+  
+  text-align:left;
+
+}
+
+.home-title-bottom {
+  font-weight:bold;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:1.5em;
+  padding-left:20px;
+  padding-top:40px;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+
+}
+
+.home-1-title {
+  margin-top:130px;
+  margin-bottom:0px;
+}
+
+.home-2 {
+  padding-top:25px;
+  text-align:left;
+  height:100vh;
+}
+
+.home-2-bottom {
+  padding-top:50px;
+
+}
+
+.address input, .address-bottom input {
+  background-color:#fff;
+  border:2px solid #eee;
+  color:#ccc;
+}
+
+.address input:focus, .address-bottom input:focus {
+  color:#494949;
+}
+
+.address ::-webkit-input-placeholder
+ {
+   color: #ccc;
+   text-transform:uppercase;
+
+}
+
+.address :-moz-placeholder { /* Firefox 18- */
+   color: #ccc;
+   text-transform:uppercase;  
+
+}
+
+.address ::-moz-placeholder {  /* Firefox 19+ */
+   color: #ccc;
+   text-transform:uppercase;  
+
+}
+
+.address :-ms-input-placeholder {  
+   color: #ccc;
+   text-transform:uppercase;  
+
+}
+
+.state-dropdown {
+  color:#494949;
+  background-color:#fff;
+  border: 2px solid #eee;
+}
+
+.uk-container {
+  padding-left:0;
+  padding-right:0;
+}
+
+.uk-navbar-nav > li > a, .uk-navbar-item, .uk-navbar-toggle{
+  padding-left:0;
+  height:50px;
+}
+
+.uk-navbar-transparent {
+  background-color:#fff;
+}
+
+.uk-navbar-nav {
+  background-color:#fff;
+  padding-left:0;
+}
+
+.uk-navbar {
+  height:50px;
+}
+
+.uk-logo {
+  background-color:#fff;
+  background-image:url("images/logo-red.png");
+  background-size:225px;
+  background-repeat:no-repeat;
+  background-position:center left 25%;
+  width:300px;
+}
+
+.uk-logo img {
+  display:none;
+}
+
+.uk-navbar-nav > li > a {
+  color:#ff0000;
+}
+
+form {
+  text-align: left;
+    width: 140%;
+    padding-left: 20px;
+}
+
+.make-a-call input{
+  margin-left:20px;
+}
+
+
+
 }
