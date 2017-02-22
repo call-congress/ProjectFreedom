@@ -62,7 +62,12 @@
 		    	<div class="uk-width-1-3@m">
 				    <div>
 				    	<h3 class="underline">Phone numbers</h3>
-				    </div>
+							{%for num in house%}
+								{{num|safe}}<br>
+				    		{%endfor%}
+							{{senate.NAME | safe}}
+							{{
+					</div>
 				</div><!--uk width 1-3-->
 
 				<div class="uk-width-2-3@m">
