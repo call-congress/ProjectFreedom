@@ -1,39 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Call Congress</title>
-	<link rel="stylesheet" type="text/css" href="../static/uikit.css">
-	<link rel="stylesheet" type="text/css" href="../static/my-theme.css">
-	<link rel="icon" type="image/png" href="../static/images/favicon.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="../static/uikit.min.js"></script>
+{% extends "master.html" %}
 
-</head>
-<body>
-	<div class="stripe"></div>
-
-	<div class="container">
-
-	<div class="content">
-
-		<div class="uk-container">
-			<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-				<a href="" class="uk-navbar-item uk-logo"><img src="../static/images/logo.png"></a>
-			    <div class="uk-navbar-right">
-			        <ul class="uk-navbar-nav">
-			            <li class="uk-parent"><a href="#call" data-uk-smooth-scroll><div class="underline">Why Call?</div></a></li>
-			            <li class="uk-parent"><a href="html/events/"><div class="underline">Upcoming Events</div></a></li>
-			            <li class="uk-parent"><a href="html/contact/"><div class="underline">About</div></a></li>
-
-			        </ul>
-
-			     
-			    </div>
-		    </nav>
-
-	    </div><!--navbar-->
+{% block content %}
 
 
 		<div class="home-1">
@@ -213,28 +180,22 @@
 				<div class="make-a-call"><input type="submit" value="Make a Call"></div>
 			</div><!--home-2-bottom-->
 		</div><!--home2-->
-    
-    <footer><a href="#">Contact</a> | <a href="#">Legal</a> | <a href="#">Questions?</a>
-    </footer>
-    </div><!--container-->
-    </div><!--content-->
+{% endblock %}
 
-   <script>
-   	$('a[href*="#"]:not([href="#"])').click(function() {
-   		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-   			var target = $(this.hash);
-   			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-   			if (target.length) {
-   				$('html, body').animate({
-   					scrollTop: target.offset().top
-   				}, 1000);
-   				return false;
-   			}
-   		}
-   	});
-   </script>
-
-
-	
-</body>
-</html>
+{% block js_script %}
+<script type="text/javascript">
+$('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
+        location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+                return false;
+            }
+    }
+});
+</script>
+{% endblock %}
