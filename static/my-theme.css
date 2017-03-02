@@ -30,7 +30,15 @@ h2 {
   color:#494949;
   font-size:2em;
   letter-spacing:2px;
-  text-align:left;
+  text-align:center;
+}
+
+.left {
+    text-align:left;
+}
+
+.center {
+  text-align:center;
 }
 
 h3 {
@@ -52,9 +60,28 @@ h4 {
   color:#494949;
 }
 
-.heading {
-  padding-bottom:40px;
+h5 {
+  font-weight:bold;
+  color:#494949;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-top:10px;
+}
 
+.red {
+    color:#ff0000;
+}
+
+.heading {
+  padding-bottom:20px;
+}
+
+.cover {
+  background-color:#eee;
+  display:table;
+  padding:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
 }
 
 hr {
@@ -62,6 +89,10 @@ hr {
   border-bottom: 1px solid #494949;
   margin-top:40px;
   margin-bottom:40px;
+}
+
+p {
+  color:#494949;
 }
 
 /* ------------- CONTAINER DIVS ------------- */
@@ -241,10 +272,26 @@ li.uk-active {
  -moz-background-size: cover;
  -o-background-size: cover;
  background-size: cover;
- padding-top:100px;
+ padding-top:40px;
  padding-bottom:100px;
 
   
+}
+
+.home-title-bottom {
+  font-weight:bold;
+  color:#fff;
+  text-transform:uppercase;
+  font-size:1.5em;
+  padding-left:20px;
+  padding-top:40px;
+  letter-spacing:2px;
+}
+
+.small {
+  font-size:1.1em;
+  width:60%;
+  margin:0 auto;
 }
 
 .help-text {
@@ -398,6 +445,7 @@ li.uk-active {
 
 .issues-text {
   padding-top:0px;
+  margin-bottom:50px;
 }
 
 .boxes {
@@ -424,11 +472,32 @@ label {
   font-size:.9em;
 }
 
+.request {
+  background-color:#eee;
+  border:none;
+  padding:10px 18px 10px 18px;
+  color:#494949;
+  text-transform:uppercase;
+  cursor:pointer;
+  margin-bottom:6px;
+  display:inline-block;
+  width:auto;
+  margin-right:3px;
+  text-align:center;
+  font-size:.8em;
+  margin-top:10px;
+}
+
+.request:hover {
+  background-color:#ccc;
+  color:#494949;
+}
+
+
 .box {
   color: #000;
-  padding: 20px;
   display: none;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .issues-top label:hover {
@@ -508,6 +577,33 @@ ol li:before {
   margin-bottom:0;
 }
 
+.bigger {
+  font-size:1.2em;
+  color:#494949;
+}
+
+.script {
+  line-height:1.8em;
+  color:#494949;
+}
+
+.script-title {
+  font-size:1.2em;
+  font-weight:bold;
+  text-transform:uppercase;
+  color:#494949;
+}
+
+.script-bottom {
+  margin-bottom:50px;
+}
+
+/* ------------- MEDIA QUERIES ------------- */
+
+.margin-center {
+  margin:0 auto;
+}
+
 /* ------------- MEDIA QUERIES ------------- */
 
 @media (max-width: 640px) {
@@ -553,7 +649,6 @@ footer {
   padding-left:20px;
   padding-top:40px;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
-
 }
 
 .home-1-title {
