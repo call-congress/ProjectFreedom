@@ -124,7 +124,7 @@
     <div class="home-2-bottom">
         <div class="address">
         <div class="home-title-bottom">Enter your address to begin.</div> 
-            <form><input type="text" name="firstname" placeholder="enter your address">
+            <form action="{{url_for('data')}}" method="post"><input type="text" name="firstname" placeholder="enter your address">
 
                 <select class="state-dropdown" required>
                     <option>CHOOSE A STATE</option>
