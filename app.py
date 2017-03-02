@@ -23,7 +23,7 @@ def what_to_say():
     return render_template("what-to-say.html")
 
 
-@app.route("/data")
+@app.route("/data", methods = ['GET','POST'])
 def data():
     try:
         if request.method == "POST":
