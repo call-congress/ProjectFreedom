@@ -102,14 +102,6 @@ def data():
                                senator_2_url = senator_2_url, senator_2_name = senator_2_name,
                                senator_2_offices = senator_2_offices)
 
-
-    except BuildError:
-        return redirect(url_for('home'))
-    except requests.ConnectionError:
-        return redirect(url_for('home'))
-    except KeyError:
-        return redirect(url_for('home'))
-
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
