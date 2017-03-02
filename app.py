@@ -100,8 +100,9 @@ def data():
         return render_template("data.html", numbers = numbers, district = district_number, rep = rep,
                                url = url, senator_1_url = senator_1_url, senator_1_name = senator_1_name,sen_1_offices = sen_1_offices,
                                senator_2_url = senator_2_url, senator_2_name = senator_2_name,
-                               senator_2_offices = senator_2_offices)
-
+                               senator_2_offices = senator_2_offices)   
+    except: 
+        pass
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
