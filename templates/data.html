@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Call Congress</title>
-	<link rel="stylesheet" type="text/css" href="../../static/uikit.css">
-	<link rel="stylesheet" type="text/css" href="../../static/my-theme.css">
-	<link rel="icon" type="image/png" href="../../static/images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../static/uikit.css">
+	<link rel="stylesheet" type="text/css" href="../static/my-theme.css">
+	<link rel="icon" type="image/png" href="../static/images/favicon.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="../../static/uikit.min.js"></script>
+	<script src="../static/uikit.min.js"></script>
 
 
 </head>
@@ -21,7 +21,7 @@
 
 	<div class="uk-container">
 		<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-			<a href="../../index.html" class="uk-navbar-item uk-logo"><img src="../../static/images/logo.png"></a>
+			<a href="../index.html" class="uk-navbar-item uk-logo"><img src="../static/images/logo.png"></a>
 		    <div class="uk-navbar-right">
 		        <ul class="uk-navbar-nav">
 		            <li class="uk-parent red"><a href="../../index.html#call"><div class="underline">Why Call?</div></a></li>
@@ -35,10 +35,9 @@
     <div class="page">
     	<div class="transparent-white">
     		<h2 class="heading">Make a call</h2>
-    		<hr>
     		<div class="uk-grid issues-text"> 			
     			<div class="uk-width-1-2">
-    			<h4>How to Make a Call</h4>
+    			<h4 class="center">How to Make a Call</h4>
     			<ol>
     				<li>Call local offices instead of the DC office. There are staffers in local offices whose responsibility it is to respond to constituents.</li>
 					<li>Leave a message if you can’t speak to somebody. If all inboxes are full/phone lines down, try another office. If you can't leave your message at all by phone, send an email, then call back another day.</li>
@@ -47,7 +46,7 @@
 
     			</div>
     			<div class="uk-width-1-2">
-    			<h4>What to Say</h4>
+    			<h4 class="center">What to Say</h4>
     			<ol>
     				<li>Make sure to leave your name and full address where you're registered to vote. Calls may be disregarded if you can’t prove your constituency. </li>
 					<li>Name the issue you are talking about.</li>
@@ -65,10 +64,10 @@
 					<table>
 						<tbody>
 							<tr>
-								<td>{{senator_1_name | safe}}</td>
+								<td class="scripts-table"><span class="rep-name">{{senator_1_name | safe}}</span></td>
 							</tr>
 							<tr>
-								<td><a href = "{{senator_1_url | safe}}">Send Message</a></td>
+								<td class="send-message"><a href = "{{senator_1_url | safe}}">Send Message</a></td>
 							</tr>
 						{%for office in sen_1_offices%}
 							<tr><td>{{office |safe }}</td></tr>
@@ -243,9 +242,20 @@
 								     
 								        </select>
 								    </div>
-								    <div class="one box">I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. The Republicans Not refused to hold a hearing for ten months on the highly qualified judge Merrick Garland. The only nominee the Senate should be voting on is Merrick Garland. Neil Gorsuch on the bench would be an atrocity because he will vote to overturn only would Judge Gorsuch undermine countless laws, including those that protect the Roe V. Wade, environmental regulations , workers' rights, women’s ’s rights, and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+								    <div class="one box">
+
+								    <h4 class="cover">Neil Gorsuch</h4>
+								    <span class="bigger">My name is ______ and I'm a constituient from <b>City, State</b>. My address is _____ (include zip).</span>
+
+
+								    <p class="script">I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. The Republicans Not refused to hold a hearing for ten months on the highly qualified judge Merrick Garland. The only nominee the Senate should be voting on is Merrick Garland. Neil Gorsuch on the bench would be an atrocity because he will vote to overturn only would Judge Gorsuch undermine countless laws, including those that protect the Roe V. Wade, environmental regulations , workers' rights, women’s ’s rights, and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.</p>
+
+								    <div class="script-bottom"><h4 class="cover">Further Reading</h4>
+								    <a href="#">Link 1</a><br>
+								    <a href="#">Link 2</a>
+								    </div>
+
+								    </div>
 								</div>
 		    				</div><!--blank div-->
 		    	</div><!--width 2-3-->
