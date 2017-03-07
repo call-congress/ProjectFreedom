@@ -107,6 +107,8 @@ def data():
                                senator_2_offices = senator_2_offices)   
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port,debug= True)
+    debug = int(os.environ.get("DEBUG", False))
+    app.run(host='0.0.0.0', port=port,debug= debug)
+
     house_df.to_sql(name = "house", con = db, flavor = "sqlite")
     senator_df.to_sql(name="senate",con=db,flavor="sqlite")
