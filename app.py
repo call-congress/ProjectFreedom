@@ -7,8 +7,7 @@ import os
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tempm/congress.db"
-db = SQLAlchemy(app)
+
  
 @app.route("/")
 def index():
