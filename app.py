@@ -7,7 +7,6 @@ import os
 
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tempm/congress.db"
 
  
 @app.route("/")
@@ -111,7 +110,6 @@ def data():
                                senator_2_offices = senator_2_offices)   
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    debug = int(os.environ.get("DEBUG", True))
-    app.run(host='0.0.0.0', port=port,debug= debug)
-
+    debug = int(os.environ.get("DEBUG", False))
+    app.run(host='0.0.0.0', port=port)
 
