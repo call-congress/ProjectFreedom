@@ -17,6 +17,10 @@ def index():
 def about():
     return render_template("about.html")
 
+@app.route("/legal")
+def legal():
+    return render_template("legal.html")
+
 @app.route("/events")
 def events():
     return render_template("events.html")
