@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import re
 import os
-from flask_sqlalchemy import SQLAlchemy
+
 
 
 app = Flask(__name__)
@@ -108,7 +108,5 @@ def data():
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     debug = int(os.environ.get("DEBUG", False))
-    app.run(host='0.0.0.0', port=port,debug= debug)
+    app.run(host='0.0.0.0', port=port)
 
-    house_df.to_sql(name = "house", con = db, flavor = "sqlite")
-    senator_df.to_sql(name="senate",con=db,flavor="sqlite")
