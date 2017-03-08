@@ -3,12 +3,12 @@ import requests
 import pandas as pd
 import re
 import os
-from flask_sqlalchemy import SQLAlchemy
+
 
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///tempm/congress.db"
-db = SQLAlchemy(app)
+
  
 @app.route("/")
 def index():
@@ -17,6 +17,10 @@ def index():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/legal")
+def legal():
+    return render_template("legal.html")
 
 @app.route("/events")
 def events():
@@ -107,8 +111,7 @@ def data():
                                senator_2_offices = senator_2_offices)   
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    debug = int(os.environ.get("DEBUG", False))
+    debug = int(os.environ.get("DEBUG", True))
     app.run(host='0.0.0.0', port=port,debug= debug)
 
-    house_df.to_sql(name = "house", con = db, flavor = "sqlite")
-    senator_df.to_sql(name="senate",con=db,flavor="sqlite")
+
