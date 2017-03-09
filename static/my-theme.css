@@ -89,6 +89,10 @@ h6 {
   letter-spacing:2px;
 }
 
+.padding-bottom {
+  padding-bottom:10px;
+}
+
 hr {
   width:1.5em;
   border-bottom: 1px solid #494949;
@@ -147,6 +151,7 @@ body {
 footer {
    position:absolute;
    bottom:0;
+   left:0;
    width:100%;
    height:30px;   /* Height of the footer */
    background:#eee;
@@ -234,23 +239,20 @@ li.uk-active {
 
 .home-1-title {
   font-size:2em;
-  letter-spacing:2px;
   color:#fff;
   width:55%;
   margin:0 auto;
   text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+  font-weight:bold;
 
 }
 
 .home-1-title-text {
-  font-size:1.3em;
-  padding-top:20px;
-  letter-spacing:2px;
+  font-size:.9em;
   color:#fff;
-  width:55%;
+  width:45%;
   margin:0 auto;
-  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
-
+  padding-top:15px;
 }
 
 .home-1 {
@@ -313,9 +315,11 @@ li.uk-active {
 }
 
 .help-text {
-  width:60%;
   margin:0 auto;
-  font-size:1.2em;
+  font-size:1em;
+  font-weight:bold;
+  color:#494949;
+  width:40%;
 }
 
 /* ------------- MAKE A CALL BUTTONS ------------- */
@@ -482,11 +486,14 @@ li.uk-active {
 
 .issues-text {
   padding-top:0px;
-  margin-bottom:50px;
+}
+
+.gray-box {
+  background-color:#f7f7f7;
+  padding:40px;
 }
 
 .boxes {
-
   padding-top:40px;
 }
 
@@ -494,19 +501,33 @@ li.uk-active {
   padding:20px;
 }
 
-label {
-  background-color:#ff0000;
+.issue-title {
+  font-weight:bold;
+  font-size:1.1em;
+}
+
+.issue {
+
   border:none;
-  padding:10px 18px 10px 18px;
-  color:#fff;
+  padding:18px 8px 18px 8px;
+  color:#6d6d6d;
   text-transform:uppercase;
   cursor:pointer;
   margin-bottom:6px;
   display:inline-block;
-  width:auto;
+  width:24%;
   margin-right:3px;
   text-align:center;
-  font-size:.9em;
+  font-size:.8em;
+  font-weight:bold;
+  letter-spacing:2px;
+  background-color:#f1f1f1;
+}
+
+.issue:hover {
+  background-color:#ff0000;
+  color:#fff;
+  transition: 0.5s ease;
 }
 
 .request {
@@ -525,41 +546,38 @@ label {
   margin-top:10px;
 }
 
-.request:hover {
-  background-color:#ccc;
-  color:#494949;
-}
-
-
 .box {
   color: #000;
   display: none;
-  margin-top: 40px;
+  margin-top: 25px;
   margin-bottom:100px;
 }
 
-.issues-top label:hover {
-  background-color:#fafafa;
-  color:#ff0000;
-  transition: background 0.2s linear;
+.issue-content {
+  display: none;
+  transition:0.5s fadeInDownBig;
 }
 
-[id^=switch],
-[id^=switch] + *{
-  display:none;
-}
-[id^=switch]:checked + *{
-  display:block;
+.issue-text {
+   padding-top:40px;
 }
 
-label[for]:active {
-    background-color:#000;
-}
+.issue.active {
+  background: #ff0000;
+  color:#fff;
+  }
 
 .dropdown {
-  width:96%;
-  border:1px solid #eee;
-  margin-top:15px;
+  width: 100%;
+  border: 2px solid #eee;
+  margin-top: 15px;
+  height: 40px;
+  font-size: .9em;
+  background-color: transparent;
+  color: #494949;
+  padding-left:10px;
+  -webkit-appearance:none;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NDQ0NDQ7fQo8L3N0eWxlPgo8dGl0bGU+YXJyb3dzPC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxLjQsNC43IDIuNSwzLjIgMy41LDQuNyAiLz4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4KPC9zdmc+Cg==) no-repeat 99% 50%;
 }
 
 .tips {
@@ -658,6 +676,22 @@ ol li:before {
   font-weight:bold;
   font-size:.8em;
 }
+
+.phone-numbers {
+  height:500px;
+  padding-bottom:100px;
+}
+
+/* ------------- EVENTS PAGE ------------- */
+
+/* the slides */
+  .slick-slide {
+    margin: 0 20px;
+  }
+  /* the parent */
+  .slick-list {
+    margin: 0 -20px;
+  }
 
 /* ------------- LEGAL PAGE ------------- */
 

@@ -66,7 +66,9 @@
 				</select>
 				</form>
 			</div>
+
 			<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+
 		</div><!--Home1-->
 		
 		<div class="home-2">
@@ -110,6 +112,7 @@
 				        <h3>The Bottom Line</h3>
 				        <p>If you have a strong opinion about an issue, it’s extremely important to voice it, no matter what your rep’s position may be. Make sure to let them know we’ll be watching their vote.</p></div>
 				    </div>
+
 				</div>
 				 <div class="uk-child-width-expand@s uk-text-center" uk-grid>
 				 </div>
@@ -119,7 +122,8 @@
 			<div class="trans"></div>
 				<div class="address-bottom">
 				<div class="home-title-bottom">Enter your address to begin</div>
-					<form><input type="text" name="firstname" placeholder="enter your address">
+				<div class="help-text">We provide you with the phone numbers of your legislators as well as suggested scripts if you're unsure of what to say.</div> 
+					<form><input type="text" name="firstname" placeholder="enter your address" required>
 
 						<select class="state-dropdown-bottom" required>
 							<option>CHOOSE A STATE</option>
@@ -184,19 +188,5 @@
 {% endblock %}
 
 {% block js_script %}
-<script type="text/javascript">
-$('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && 
-        location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-                return false;
-            }
-    }
-});
-</script>
+
 {% endblock %}
