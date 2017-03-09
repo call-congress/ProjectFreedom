@@ -71,38 +71,58 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -45px;
 }
 [dir='rtl'] .slick-prev
 {
-    right: -25px;
+    right: -45px;
     left: auto;
 }
 .slick-prev:before
 {
-    content: '←';
+    content: "";
+    background-image: url("images/left.svg");
+    display: inline-block;
+    width: 25px;
+    height: 45px;
+    background-size: 100%;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: "";
+    background-image: url("images/right.svg");
+    display: inline-block;
+    width: 25px;
+    height: 45px;
+    background-size: 100%;
 }
 
 .slick-next
 {
-    right: -25px;
+    right: -45px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -25px;
+    left: -45px;
 }
 .slick-next:before
 {
-    content: '→';
+    content: "";
+    background-image: url("images/right.svg");
+    display: inline-block;
+    width: 25px;
+    height: 45px;
+    background-size: 100%;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: "";
+    background-image: url("images/right.svg");
+    display: inline-block;
+    width: 25px;
+    height: 45px;
+    background-size: 100%;
 }
 
 /* Dots */

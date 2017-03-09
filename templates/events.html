@@ -6,9 +6,11 @@
     
 <div class="your-class">
     <div>
+        <div class="slide">
         <h5 class="cover">January 17th, 2017</h5>
         <h5 class="red">Neil Gorsuch Nomination</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
     </div>
     <div>
         <h5 class="cover">January 17th, 2017</h5>
@@ -33,7 +35,7 @@
     <div>
         <h5 class="cover">January 17th, 2017</h5>
         <h5 class="red">Neil Gorsuch Nomination</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </div>
     <div>
         <h5 class="cover">January 17th, 2017</h5>
@@ -142,48 +144,7 @@
         </div><!--home2-->
 </div><!--transparent white-->
 <script type="text/javascript" src="static/slick.min.js"></script>
- <script type="text/javascript">
-    $('.your-class').slick({
-  dots: false,
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  initialSlide: 5,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        initialSlide: 5
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 5
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 5
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-  </script>
+<script type="text/javascript" src="static/slider.js"></script>
+
 
 {% endblock %}
