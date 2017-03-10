@@ -10,7 +10,7 @@
 
 			<div class="address"><form action = "{{url_for('data')}}" method = "post"><input type="text" name="firstname" placeholder="enter your address">
 
-				<select class="state-dropdown">
+				<select class="state-dropdown" name="state">
 					<option>CHOOSE A STATE</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -125,7 +125,7 @@
 				<div class="help-text">We provide you with the phone numbers of your legislators as well as suggested scripts if you're unsure of what to say.</div> 
 					<form><input type="text" name="firstname" placeholder="enter your address" required>
 
-						<select class="state-dropdown-bottom" required>
+						<select class="state-dropdown-bottom" name="state" required>
 							<option>CHOOSE A STATE</option>
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>

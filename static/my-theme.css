@@ -65,7 +65,6 @@ h5 {
   color:#494949;
   letter-spacing:3px;
   text-transform:uppercase;
-  margin-top:10px;
 }
 
 h6 {
@@ -91,6 +90,10 @@ h6 {
 
 .padding-bottom {
   padding-bottom:10px;
+}
+
+.padding-top {
+  padding-top:15px;
 }
 
 hr {
@@ -141,9 +144,12 @@ body {
 
 .transparent-white {
   background: #fff;
-  padding:60px 100px 30px 100px; 
+  padding:60px 100px 60px 100px; 
 }
 
+.margin-top-none {
+  margin-top:0!important;
+}
 
 
 /* ------------- FOOTER ------------- */
@@ -491,6 +497,7 @@ li.uk-active {
 .gray-box {
   background-color:#f7f7f7;
   padding:40px;
+  height:63%;
 }
 
 .boxes {
@@ -602,10 +609,8 @@ ol li:before {
     content: counter(item);
     counter-increment: item;
     font-weight: bold;
-    background-color:#eee;
-    opacity: .8;
-    color:#494949;
-    padding:3px 8px 3px 8px;
+    color:#ff0000;
+    padding:3px 3px 3px 0px;
     margin-right:8px;
 }
 
@@ -614,7 +619,7 @@ ol li:before {
 }
 
 .issue-boxes {
-  padding-top:20px;
+  
 }
 
 .no-margin-top {
