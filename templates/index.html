@@ -8,9 +8,9 @@
 			Don't let lawmakers make decisions on your behalf without making your voice heard.
 			</div>
 
-			<div class="address"><form action = "{{url_for('data')}}" method = "post"><input type="text" name="firstname" placeholder="enter your address">
+			<div class="address"><form action = "{{url_for('data')}}" method = "post"><input type="text" name="firstname" placeholder="enter your address" required>
 
-				<select class="state-dropdown" name="state">
+				<select class="state-dropdown" name = "state">
 					<option>CHOOSE A STATE</option>
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -64,10 +64,11 @@
 					<option value="WI">Wisconsin</option>
 					<option value="WY">Wyoming</option>
 				</select>
+				<div class="make-a-call"><input type="submit" value="Make a Call"></div>
 				</form>
 			</div>
 
-			<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+			
 
 		</div><!--Home1-->
 		
@@ -179,10 +180,12 @@
 							<option value="WI">Wisconsin</option>
 							<option value="WY">Wyoming</option>
 						</select>
+					<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+					
 					</form>
 				
 				</div>
-				<div class="make-a-call"><input type="submit" value="Make a Call"></div>
+				
 			</div><!--home-2-bottom-->
 		</div><!--home2-->
 {% endblock %}
