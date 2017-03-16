@@ -32,6 +32,7 @@ h2 {
   font-size:2em;
   letter-spacing:2px;
   text-align:center;
+  margin-bottom:0;
 }
 
 .left {
@@ -48,7 +49,6 @@ h3 {
   font-size:1.1em;
   letter-spacing:3px;
   text-transform:uppercase;
-  margin-top:20px;
 }
 
 h3.underline {
@@ -71,6 +71,11 @@ h5 {
 h6 {
   font-weight:bold;
   color:#494949;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:.9em;
+  margin-top:0px;
+  margin-bottom:!important;
 }
 
 .red {
@@ -78,7 +83,7 @@ h6 {
 }
 
 .heading {
-  padding-bottom:20px;
+  padding-bottom:40px;
 }
 
 .cover {
@@ -94,7 +99,7 @@ h6 {
 }
 
 .padding-top {
-  padding-top:15px;
+  padding-top:40px;
 }
 
 hr {
@@ -114,6 +119,18 @@ p {
   border-bottom: 2px solid rgba(255, 0, 0, 1);
 }
 
+.icon {
+  font-size:1.2em!important;
+  margin-right:10px;
+}
+
+.shallow-padding-first {
+  padding:0px 0px 3px 30px!important;
+}
+
+.shallow-padding {
+  padding:0px 0px 3px 5px!important;
+}
 
 /* ------------- CONTAINER DIVS ------------- */
 
@@ -137,7 +154,7 @@ height:100%;
 
 .transparent-white {
   background: #fff;
-  padding:60px 100px 120px 100px; 
+  padding:60px 100px 60px 100px; 
 }
 
 .margin-top-none {
@@ -154,6 +171,7 @@ height:100%;
 footer {
   position:absolute;
     bottom:0;
+    left:0;
      width:100%;
      height:30px;
      /* Height of the footer */
@@ -705,6 +723,16 @@ ol li:before {
 
 .td-padding-top {
   padding-top:20px;
+}
+
+.i-called {
+  background:url("../static/images/bg.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width:100%;
+  height:30%;
 }
 
 /* ------------- EVENTS PAGE ------------- */
