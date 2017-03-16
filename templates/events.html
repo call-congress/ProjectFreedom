@@ -80,7 +80,7 @@
             <div class="trans"></div>
                 <div class="address-bottom">
                 <div class="home-title-bottom">Enter your address to begin</div>
-                    <form><input type="text" name="firstname" placeholder="enter your address">
+                    <form action = "{{url_for('data')}}" method = "post" class="address-bottom"><input type="text" name="firstname" placeholder="enter your address" required>
 
                         <select class="state-dropdown-bottom" name="state" required>
                             <option>CHOOSE A STATE</option>
@@ -136,10 +136,8 @@
                             <option value="WI">Wisconsin</option>
                             <option value="WY">Wyoming</option>
                         </select>
-                    </form>
-                
-                </div>
-                <div class="make-a-call"><input type="submit" value="Make a Call"></div>
+                    <div class="make-a-call"><input type="submit" value="Make a Call"></div>
+                </form>
             </div><!--home-2-bottom-->
         </div><!--home2-->
 </div><!--transparent white-->
