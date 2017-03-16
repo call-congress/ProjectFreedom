@@ -1,4 +1,5 @@
 
+
 /* ------------- FONT STYLES ------------- */
 
 @font-face {
@@ -150,6 +151,7 @@ body {
 .margin-top-none {
   margin-top:0!important;
 }
+
 
 
 /* ------------- FOOTER ------------- */
@@ -337,7 +339,7 @@ li.uk-active {
     color:#fff;
 }
 
-.address input {
+.address input[type=text] {
   background-color:transparent;
   border:2px solid #fff;
   border-radius:5px;
@@ -375,7 +377,7 @@ li.uk-active {
 
 }
 
-.make-a-call input {
+.make-a-call input[type=submit] {
   background-color:#ff0000;
   border:none;
   padding:15px 40px 15px 40px;
@@ -458,7 +460,7 @@ li.uk-active {
 
 }
 
-.address-bottom input {
+.address-bottom input[type=text] {
   background-color:transparent;
   -webkit-appearance:none;
   border:2px solid #494949;
@@ -514,7 +516,6 @@ li.uk-active {
 }
 
 .issue {
-
   border:none;
   padding:18px 8px 18px 8px;
   color:#6d6d6d;
@@ -663,17 +664,9 @@ ol li:before {
   margin:0 auto;
 }
 
-.rep-name {
-  font-size:1em;
-  text-transform:uppercase;
-  font-weight:bold;
-  background-color:#eee;
-  padding:5px;
-}
-
 .scripts-table {
   padding-top:10px;
-  padding-bottom:10px;
+  padding-bottom:5px;
 }
 
 .send-message {
@@ -685,6 +678,36 @@ ol li:before {
 .phone-numbers {
   height:500px;
   padding-bottom:100px;
+}
+
+.rep-name {
+  font-size:.9em;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:bold;
+  color:#494949;
+  padding:8px;
+  background-color:#f1f1f1;
+}
+
+.rep-number {
+  text-transform:uppercase;
+  padding-bottom:5px;
+  color:#494949;
+  font-size:.9em;
+  letter-spacing:1px;
+}
+
+.cellpadding {
+  border-spacing: 0px 10px;
+}
+
+.td-padding {
+  padding-left:8px;
+}
+
+.td-padding-top {
+  padding-top:20px;
 }
 
 /* ------------- EVENTS PAGE ------------- */
