@@ -104,6 +104,7 @@ def data():
         senator_2_name = senator_2[2]
         senator_2_offices = senator_2[3:]
 
+
     return render_template("data.html", numbers = numbers, district = district_number, rep = rep,
                                url = url, senator_1_url = senator_1_url, senator_1_name = senator_1_name,sen_1_offices = sen_1_offices,
                                senator_2_url = senator_2_url, senator_2_name = senator_2_name,

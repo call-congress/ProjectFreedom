@@ -1,276 +1,304 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Call Congress</title>
-	<link rel="stylesheet" type="text/css" href="../static/uikit.css">
-	<link rel="stylesheet" type="text/css" href="../static/my-theme.css">
-	<link rel="icon" type="image/png" href="../static/images/favicon.png">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script src="../static/uikit.min.js"></script>
+{% extends "master.html" %}
 
-
-</head>
-<body>
-	<div class="stripe"></div>
-
-	<div class="container">
-
-	<div class="content">
-
-	<div class="uk-container">
-		<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-			<a href="../index.html" class="uk-navbar-item uk-logo"><img src="../static/images/logo.png"></a>
-		    <div class="uk-navbar-right">
-		        <ul class="uk-navbar-nav">
-		            <li class="uk-parent red"><a href="../../index.html#call"><div class="underline">Why Call?</div></a></li>
-		            <li class="uk-parent"><a href="../../html/events/"><div class="underline">Upcoming Events</div></a></li>
-		            <li class="uk-parent"><a href="../../html/about/"><div class="underline">About</div></a></li>
-		        </ul>
-		    </div>
-	    </nav>
-    </div><!--navbar-->
+{% block content %}
 
     <div class="page">
     	<div class="transparent-white">
     		<h2 class="heading">Make a call</h2>
     		<div class="uk-grid issues-text"> 			
-    			<div class="uk-width-1-2">
-    			<h4 class="center">How to Make a Call</h4>
-    			<ol>
-    				<li>Call local offices instead of the DC office. There are staffers in local offices whose responsibility it is to respond to constituents.</li>
-					<li>Leave a message if you can’t speak to somebody. If all inboxes are full/phone lines down, try another office. If you can't leave your message at all by phone, send an email, then call back another day.</li>
-					<li>Set aside time to make calls daily/weekly. Persistence is highly effective.</li>
-				</ol>
+    			<div class="uk-width-1-3">
+                <h3 class="center">How to Make a Call</h3>
+                    <div class="gray-box">
+                        
+                        <ol>
+                            <li>Be sure to call local offices instead of just the DC office. There are staffers in local offices whose responsibility it is to respond to constituents.</li>
+                            <li>Leave a message if you can’t speak to somebody. If all inboxes are full/phone lines down, try another office. If you can't leave your message at all by phone, send an email, then call back another day.</li>
+                            <li>Set aside time to make calls daily/weekly. Persistence is highly effective.</li>
+                        </ol>
+                    </div>
+             
 
+                </div>
+                <div class="uk-width-2-3">
+                <h3 class="center">What to Say</h3>
+                    <div class="gray-box">
+	                	<ol>
+	                    <li>Make sure to leave your name and full address where you're registered to vote. Calls may be disregarded if you can’t prove your constituency. </li>
+	                    <li>Name the issue you'd like to talk to them about.</li>
+	                    <li>Name the action you want the representative to take on the issue.</li>
+	                    <li>Briefly explain why you are calling about the issue. We've provided effective examples below if you're unsure of what to say.  If you have personal/professional experience with the issue, make sure to mention it.</li>
+	                    <li>You can also call to ask where your rep stands on an issue, or simply call to thank them for their support. You can also call to ask where your rep stands on an issue, or simply call to thank them for their support.  where.</li>
+	                	</ol>
+                    </div>
     			</div>
-    			<div class="uk-width-1-2">
-    			<h4 class="center">What to Say</h4>
-    			<ol>
-    				<li>Make sure to leave your name and full address where you're registered to vote. Calls may be disregarded if you can’t prove your constituency. </li>
-					<li>Name the issue you are talking about.</li>
-					<li>Name the action you want the representative to take on the issue.</li>
-					<li>Briefly explain why you are calling about the issue. We've provided effective examples below under "Issues" if you're unsure of what to say.  If you have personal/professional experience with the issue, make sure to mention it.</li>
-
-    			</div>
-    			
     		</div>
 
-		    <div uk-grid>
+		    <div uk-grid class="margin-top-none">
 		    	<div class="uk-width-1-3@m">
-				    <div>
-						<h3 class="underline">Phone numbers</h3>
-					<table>
-						<tbody>
-							<tr>
-								<td class="scripts-table"><span class="rep-name">{{senator_1_name | safe}}</span></td>
-							</tr>
-							<tr>
-								<td class="send-message"><a href = "{{senator_1_url | safe}}">Send Message</a></td>
-							</tr>
-						{%for office in sen_1_offices%}
-							<tr><td>{{office |safe }}</td></tr>
-						{%endfor%}
-							<tr>
-								<td>{{senator_2_name | safe }}</td>
-							</tr>
-							<tr>
-								<td><a href="{{senator_2_url | safe}}">Send Message</a></td>
-							</tr>
-							{%for office in senator_2_offices%}
-								<tr><td>{{office | safe}}</td></tr>
+				    <div class="phone-numbers">
+						<h5 class="center">Phone numbers</h5>
+						<table class="cellpadding">
+							<tbody>
+								<tr>
+									<td><span class="rep-name">{{senator_1_name | safe}}</span></td>
+								</tr>
+								<tr>
+									<td class="send-message td-padding scripts-table"><a href = "{{senator_1_url | safe}}" class="link">Send Message <i class="fa fa-envelope-o" aria-hidden="true"></i></a></td>
+								</tr>
+							{%for office in sen_1_offices%}
+								<tr><td class="rep-number td-padding">{{office |safe }}</td></tr>
 							{%endfor%}
-							<tr>
-								<td>{{rep | safe}}</td>
-							<tr>
-								<td><a href="{{url| safe}}">Send Message</a></td>
-							</tr>
-							{%for num in numbers%}
-								<tr><td>{{num | safe}}</td></tr>
-							{%endfor%}
-						</tbody>
-					</table>
+								<tr>
+									<td class="td-padding-top"><span class="rep-name">{{senator_2_name | safe }}</span></td>
+								</tr>
+								<tr>
+									<td class="send-message td-padding scripts-table"><a href="{{senator_2_url | safe}}" class="link">Send Message <i class="fa fa-envelope-o" aria-hidden="true"></i></a></td>
+								</tr>
+								{%for office in senator_2_offices%}
+									<tr><td class="rep-number td-padding">{{office | safe}}</td></tr>
+								{%endfor%}
+								<tr>
+									<td class="td-padding-top"><span class="rep-name">{{rep | safe}}</span></td>
+								<tr>
+									<td class="send-message td-padding scripts-table"><a href="{{url| safe}}" class="link">Send Message <i class="fa fa-envelope-o" aria-hidden="true"></i></a></td>
+								</tr>
+								{%for num in numbers%}
+									<tr><td class="rep-number td-padding">{{num | safe}}</td></tr>
+								{%endfor%}
+							</tbody>
+						</table>
 
 					</div>
 				</div><!--uk width 1-3-->
 
 				<div class="uk-width-2-3@m">
-				    <div>
-				    	<div class="issues-top">
-		    				<h3 class="underline">Issues</h3>
-							<div class="issue-boxes">
-						    	<label for="switch-1" id="civil-rights">Civil Rights</label>
-						    	<label for="switch-2" id="corruption">Corruption</label> 
-						    	<label for="switch-3" id="education">Education</label> 
-						    	<label for="switch-4" id="environment">Environment</label>
-						    	<label for="switch-5" id="healthcare">Healthcare</label> 
-						    	<label for="switch-6" id="immigration">Immigration</label> 
-						    	<label for="switch-7" id="wall-st">Wall St </label> 
-						    	<label for="switch-8" id="womens-rights">Women's Rights</label> 
-						    	<label for="switch-9" id="womens-rights">Other</label> 
+                <h5 class="center">SCRIPTS</h5>
+                    <div>
+                        <div class="issues-top">
+                            
 
-						    	<input id="switch-1" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Civil Rights</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
-				       
+                            <!-- CATEGORY BUTTONS -->
+                            <div class="issue-boxes">
+                                <button class="issue" aria-hidden="true">Civil Rights</button>
+                                <button class="issue" aria-hidden="true">Corruption</button>
+                                <button class="issue" aria-hidden="true">Education</button>
+                                <button class="issue" aria-hidden="true">Environment</button>
+                                <button class="issue" aria-hidden="true">Healthcare</button>
+                                <button class="issue" aria-hidden="true">Immigration</button>
+                                <button class="issue" aria-hidden="true">Wall St</button>
+                                <button class="issue" aria-hidden="true">Women's Rights</button>
+                                <button class="issue" aria-hidden="true">Other</button>
+                                <button class="issue" aria-hidden="true">Request a script</button>
+                            <!-- DROPDOWNS -->
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Civil Rights</option>
+                                            <option value="red">Support the Voting Rights Amendment Act</option>
+                                            <option value="green">Protect Transgender Students</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">
+                                        <div class="gray-box">
+                                        <h5 class="padding-bottom underline">Support the Voting Rights Amendment Act</h5>
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge <b>Sen/Rep _____</b> to support the Voting Rights Advancement Act, legislation that will protect our vulnerable communities from suppressive voting legislation and ensure that everyone in America has a voice in our democracy. 
+                                        <br><br>
+                                        These laws are intentionally discriminatory on the basis of race, age, and disability and unconstitutionally disenfranchise millions of americans in these vulnerable communities. For Jeff Sessions and the Justice Department to dismiss the claim that suppressive voter laws are not crafted with the intention of discrimination is outrageous. A change in administration in no way invalidates thousands of pages of overwhelming evidence that proves this legislation deliberately suppresses minority voters. 
+                                        <br><br>
+                                        It is unacceptable to continue to disenfranchise voters in our democracy, and I urge <b>Sen/Rep _____</b> to support the Voting Rights Advancement act and to ensure that all voices can be heard. Thank you for your time.</p>
+                                        </div>
+                                    </div>
+                                    <div class="green box">
+                                        <div class="gray-box">
+                                        <h5 class="padding-bottom">Protect Transgender Students</h5>
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge Sen/Rep ____ to do everything in his/her power to oppose the lifting of Title IX protections for transgender students.
+                                        <br><br>
+                                        The reality is that there hasn’t been a single case of any student pretending to be transgender to gain access to a bathroom, and the real crime is turning our backs on vulnerable students who deserve to be protected under Title IX. This discriminatory decision leaves our most vulnerable children and teenagers at an even higher risk of bullying and stigmatization, and it is heinous that the Departments of Justice and Education are turning their backs and allowing this to happen in our schools.
+                                        <br><br>
+                                        I urge Sen/Rep ____ to take a stand for protection transgender students deserve and to encourage adults everywhere to do the same. Thank you for your time.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-						    	<input id="switch-2" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Corruption</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
-						    	<input id="switch-3" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Education</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Education</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
-						    	<input id="switch-4" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Environment</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
-						    	<input id="switch-5" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Civil Rights</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
-						    	<input id="switch-6" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Immigration</option>
+                                            <option value="red">Protect Immigrant Communities</option>
+                                            <option value="green">Immigration Ban</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">
+                                        <div class="gray-box">
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge <b>Sen/Rep _____</b> to protect our immigrant communities against the Trump Administration’s aggressive and inhumane deportation tactics. 
+                                        <br><br>
+                                        These tactics unfairly target undocumented immigrants who are productive and valued members of our communities, and it is outrageous to claim that any one of these members who has committed a non-serious offence qualifies for deportation. The measures of turning local police into immigration officers allows and encourages the illegal targeting of people based on race, skin color, and language, creating an atmosphere of fear that will only tear families apart and drive these immigrants further into the shadows. 
+                                        <br><br>
+                                        This racist and inhumane agenda flies in the face of American values of diversity and nondiscrimination, and I urge <b>Sen/Rep _____</b> to help protect our vulnerable immigrant communities. Thank you for your time.</p>
+                                        </div>
+                                    </div>
+                                    <div class="green box">
+                                    </div>
+                                </div>
 
-						    	<input id="switch-7" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Civil Rights</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
-						    	<input id="switch-8" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Corruption</option>
-								            <option value="red">Red</option>
-								            <option value="green">Green</option>
-								            <option value="blue">Blue</option>
-								        </select>
-								    </div>
-								    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
-								    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-								    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-								</div>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Women's Rights</option>
+                                            <option value="red">Block Defunding of Planned Parenthood</option>
+                                            <option value="green">Say NO to the Global Gag Rule</option>
+                                            <option value="blue">Block Late-Term Abortion Bans</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge <b>Sen/Rep _____</b> to block any congressional attempts to federally defund Planned Parenthood. 
+                                        <br><br>
+                                        States’ denial of Medicaid or Title X grants to certain clinics is not only unconstitutional, but will render America’s poorest women unable to cover the cost of legitimate health care needs without safe and feasible alternatives.There is absolutely no legitimate social benefit in allowing states the ability to block these grants and it and only promotes the grotesque political agenda to deny vulnerable people in our communities of the right to necessary healthcare and family planning services.
+                                        <br><br>
+                                        I urge <b>Sen/Rep ______</b> to take a stand for women everywhere and help these clinics keep their doors open. Thank you for your time.</p>
+</div>
+                                    <div class="green box">
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge <b>Sen/Rep ____</b> to take a stand against the Global Gag Rule, a cruel and unusual denial of life-saving healthcare to the poorest women around the world.
+                                        <br><br>
+                                        Forcing healthcare providers around the world to choose between access to U.S. funding and their duty to provide patients with the safe healthcare that they deserve is not only dangerous and irresponsible, but severely degrades international progress made in women’s health. This rule has shown to have no effect on the rate of unwanted pregnancy or abortion in the past, and furthermore serves no purpose other than to promote the conservative political agenda that women around the world do not deserve the right to safe and affordable healthcare and family planning services.
+                                        <br><br>
+                                        I urge <b>Sen/Rep ____</b> to take a stand against the revival of this rule and the grotesque degradation to women’s health it causes. Thank you for time. </p>
 
-						    	<input id="switch-9" type="radio" name="tog">
-						    	<div>
-							    	<div>
-								        <select class="dropdown">
-								            <option>Other</option>
-								            <option value="one">
-								          	Neil Gorsuch
-								          	</option>
-								     
-								        </select>
-								    </div>
-								    <div class="one box">
+                                    </div>
+                                    <div class="blue box">
+                                        <p>My name is ______, and I'm a constituent from <b>City, State</b>. <i>Leave your full address and any other information the office asks for.</i>
+                                        <br><br>
+                                        I’m calling to urge <b>Sen/Rep ____</b> to block late-term abortion bans, an unconstitutional and cruel overreach of the conservative political agenda into women’s healthcare.
+                                        <br><br>
+                                        It is not only extremely dangerous, but illegal to attempt remove critical, unmeasurably difficult and life-saving medical decisions from both women and doctors alike. These bans are nothing but another thinly veiled political attempt to erode women’s rights protected under Roe v. Wade and to completely outlaw abortion altogether.
+                                        <br><br>
+                                        I expect <b>Sen/Rep ____</b> to stand up against this grotesque attack on women’s rights and support access to safe and necessary medical procedures. Thank you for your time.
+                                        </p>
+                                    </div>
+                                </div>
 
-								    <h4 class="cover">Neil Gorsuch</h4>
-								    <span class="bigger">My name is ______ and I'm a constituient from <b>City, State</b>. My address is _____ (include zip).</span>
+                                <div class="issue-content">
+                                    <div>
+                                        <select class="dropdown">
+                                            <option>Civil Rights</option>
+                                            <option value="red">Red</option>
+                                            <option value="green">Green</option>
+                                            <option value="blue">Blue</option>
+                                        </select>
+                                    </div>
+                                    <div class="red box">You have selected <strong>red option</strong> so i am here</div>
+                                    <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+                                    <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+                                </div>
 
+                                <div class="issue-content">
+                                    <div class="issue-text">
+                                    <p>If you'd like us to include a script that's not listed here, or if you have any questions or comments, please shoot us an email at <a href="mailto:info@call-congress.com" class="link">info@call-congress.com</a>.</p>
+                                    </div>
+                                </div>
+                                
+                            </div><!--blank div-->
+                </div><!--width 2-3-->
 
-								    <p class="script">I’m calling to urge Senator/Rep _____ to oppose Donald Trump’s Supreme Court Nominee Neil Gorsuch, a dangerous nominee who must be stopped from receiving Senate confirmation. The Republicans Not refused to hold a hearing for ten months on the highly qualified judge Merrick Garland. The only nominee the Senate should be voting on is Merrick Garland. Neil Gorsuch on the bench would be an atrocity because he will vote to overturn only would Judge Gorsuch undermine countless laws, including those that protect the Roe V. Wade, environmental regulations , workers' rights, women’s ’s rights, and consumer protections, but this is a stolen seat. This is the first time in American history that one party has blockaded a nominee for almost a year in order to deliver a seat to a president of their own party. If this tactic is rewarded rather than resisted, it will set a dangerous new precedent in American governance. I strongly urge Senator/Rep _____ to take a principled stand to oppose this nominee, for the people of our state and for the Constitution. Thank you for your time.</p>
-
-								    <div class="script-bottom"><h4 class="cover">Further Reading</h4>
-								    <a href="#">Link 1</a><br>
-								    <a href="#">Link 2</a>
-								    </div>
-
-								    </div>
-								</div>
-		    				</div><!--blank div-->
-		    	</div><!--width 2-3-->
 		    </div><!--boxes-->
 		</div><!--transparent white-->
 	</div><!-- page -->
-</div>
-</div>
- 
-<footer><a href="#">Contact</a> | <a href="#">Legal</a> | <a href="#">Questions?</a></footer>
+{% endblock %}
 
-</div><!--container-->
-</div><!--content-->
+{% block js_script %}
+<script type="text/javascript">
+$('.issue').click(function() {
+  var index = $(this).index();
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active');
+        $('.issue-content').eq(index).addClass('fadeOutDown')
+  } else {
+      $('.issue').removeClass('active');
+    $(this).addClass('active')
+    $('.issue-content').hide().eq(index).show().removeClass('fadeOutDown')
+  }
+});
 
-<script>
 $(document).ready(function() {
     $("select").change(function(){
         $(this).find("option:selected").each(function(){
@@ -282,9 +310,9 @@ $(document).ready(function() {
                 $(".box").hide();
             }
         });
-    }).change();
+    });
 });
+
 </script>
 
-</body>
-</html>
+{% endblock %}
