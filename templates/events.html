@@ -75,10 +75,12 @@
             <div class="trans"></div>
                 <div class="address-bottom">
                 <div class="home-title-bottom">Enter your address to begin</div>
-                    <form action = "{{url_for('data')}}" method = "post" class="address-bottom"><input type="text" name="firstname" placeholder="enter your address" required>
+                    <form action = "{{url_for('data')}}" method = "post" class="address-bottom">
+                    <input type="text" name="street" placeholder="Street Address" required>
+                    <input type="text" name="city" placeholder="City" class="city-width" required>
 
                         <select class="state-dropdown-bottom" name="state" required>
-                            <option>CHOOSE A STATE</option>
+                            <option>STATE</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>

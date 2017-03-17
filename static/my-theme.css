@@ -358,7 +358,7 @@ li.uk-active {
   background-color:transparent;
   border:2px solid #fff;
   border-radius:5px;
-  width:33%;
+  width:20%;
   line-height:2em;
   margin-top:30px;
   margin-bottom:30px;
@@ -370,25 +370,25 @@ li.uk-active {
 .address ::-webkit-input-placeholder
  {
    color: #fff;
-   text-transform:uppercase;
+  text-transform:uppercase;
 
 }
 
 .address :-moz-placeholder { /* Firefox 18- */
    color: #fff;
-   text-transform:uppercase;  
+   text-transform:uppercase;
 
 }
 
 .address ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;
-   text-transform:uppercase;  
+ text-transform:uppercase;
 
 }
 
 .address :-ms-input-placeholder {  
    color: #fff;
-   text-transform:uppercase;  
+   text-transform:uppercase;
 
 }
 
@@ -480,12 +480,16 @@ li.uk-active {
   -webkit-appearance:none;
   border:2px solid #494949;
   border-radius:5px;
-  width:33%;
+  width:25%;
   margin-top:40px;
   margin-bottom:30px;
   padding-left:10px;
   font-size:1em;
   height:38px;
+}
+
+.city-width {
+  width:150px!important;
 }
 
 .state-dropdown-bottom {
@@ -500,7 +504,6 @@ li.uk-active {
   font-size:1em;
   padding-left:10px;
   padding-right:20px;
-  margin-left:10px;
 }
 
 
