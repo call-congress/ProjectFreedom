@@ -38,14 +38,15 @@ def data():
         key = "AIzaSyADr0eoKKdN-s2jjUXwHTpAOthlOs7JfQw"
         url = "https://www.googleapis.com/civicinfo/v2/representatives"
 
-        address = request.form['firstname']
+        street = request.form['street']
+        city = request.form['city']
         state = request.form['state']
 
         legislative = "country"
 
         house = "legislatorLowerBody"
 
-        house_payload = {'address': address, "levels": legislative, "roles": house,
+        house_payload = {'address': street + " " + city, "levels": legislative, "roles": house,
                              "key": key}
 
         house_request = requests.get(url, params=house_payload)
