@@ -236,7 +236,8 @@ footer a:hover {
 .underline:hover {
   border-bottom: 2px solid rgba(255, 0, 0, 1);
 }
-/*
+
+
 
 /* ------------- ACTIVE NAVBAR LINK ------------- */
 
@@ -254,6 +255,97 @@ footer a:hover {
 li.uk-active {
   padding-left:30px;
   padding-right:30px;
+}
+
+/* ------------- MOBILE NAVBAR ------------- */
+
+.uk-offcanvas-bar {
+  width:100%;
+  height:auto;
+}
+
+#mobile-menu {
+  display:none;
+  
+}
+
+.uk-navbar-nav-mobile {
+  display:block;
+  width:100%;
+  color:#fff!important;
+  text-align:center;
+  padding-top:50px;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-logo {
+    width:250px;
+    display:inline-block;
+    float:left;
+    padding-top:15px;
+    margin-left:20px;
+  }
+
+  #mobile-menu {
+    display:block;
+    width:100%;
+    background-color:transparent;
+    color:#fff;
+    text-align:right;
+    font-size:1.7em;
+  }
+
+  #desktop-menu {
+    display:none;
+  }
+
+  .mobile-menu-icon {
+    padding-right:20px;
+    padding-top:20px;
+    cursor:pointer;
+  }
+
+  .mobile-menu-close-icon {
+    color:#fff;
+    cursor:pointer;
+    text-align:right;
+  }
+
+  .uk-offcanvas-bar .uk-navbar-nav > li > a {
+    color:#fff;
+    font-size:1.2em;
+    display:inline-block;
+    padding-top:50px;
+    padding-bottom:50px;
+  }
+
+  .mobile-menu-close-icon img {
+    width:20px;
+  }
+
+  .underline {
+    width:100%;
+    text-align:center;
+  }
+
+  .underline:hover {
+    border:none;
+  }
+
+  .uk-navbar-nav-mobile {
+  display:block;
+  width:100%;
+  color:#fff!important;
+  text-align:center;
+  padding-top:50px;
+}
+  .home-1 {
+    height:100vh!important;
+  }
+
+  body .home-1-title {
+    width:100%;
+  }
 }
 
 /* ------------- HOME PAGE ------------- */
@@ -755,7 +847,7 @@ ol li:before {
   height:450px;
 }
 
-/* ------------- MEDIA QUERIES ------------- */
+/* ------------- MEDIA QUERIES ------------- 
 
 @media (max-width: 640px) {
   .uk-grid > * {
@@ -835,13 +927,13 @@ footer {
 
 }
 
-.address :-moz-placeholder { /* Firefox 18- */
+.address :-moz-placeholder { /
    color: #ccc;
    text-transform:uppercase;  
 
 }
 
-.address ::-moz-placeholder {  /* Firefox 19+ */
+.address ::-moz-placeholder {  
    color: #ccc;
    text-transform:uppercase;  
 
@@ -912,3 +1004,4 @@ form {
 
 
 }
+*/
