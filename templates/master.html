@@ -22,12 +22,10 @@
     <div class="container">
             <!-- navbar -->
             <div class="uk-container"> 
-                <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-                    <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo">
-                        <img src="{{ url_for('static', filename='images/logo-draft-4.png') }}">
-                    </a>
+                <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar id="desktop-menu">
+                    <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo"><img src="{{ url_for('static', filename='images/logo.png') }}"> </a>
                     <div class="uk-navbar-right">
-                        <ul class="uk-navbar-nav">
+                        <ul class="uk-navbar-nav" id="menubar">
                             <li class="uk-parent red">
                                 <a href="{{ url_for('index') }}#call">
                                     <div class="underline">Why Call?</div>
@@ -60,6 +58,45 @@
                 </nav>
             </div>
             <!--navbar-->
+
+            <!--mobile navbar-->
+            <div uk-toggle="target: #offcanvas-nav" id="mobile-menu">
+                <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo mobile-menu-logo"><img src="{{ url_for('static', filename='images/logo.png') }}"> </a> 
+                <i class="fa fa-bars mobile-menu-icon" aria-hidden="true"></i></div>
+            <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+                <div class="uk-offcanvas-bar">
+                <div class="uk-offcanvas-close mobile-menu-close-icon"><img src="static/images/close-icon.png"></div>
+                    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+
+                        <ul class="uk-navbar-nav uk-navbar-nav-mobile" id="menubar">
+
+                            
+
+                            <li class="uk-parent">
+                                <a href="{{ url_for('index') }}#call">
+                                    <div class="underline">Why Call?</div>
+                                </a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="{{ url_for('events') }}">
+                                    <div class="underline">Calls to Action</div>
+                                </a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="{{ url_for('about') }}">
+                                    <div class="underline">About</div>
+                                </a>
+                            </li>
+                            <li class="uk-parent">
+                                    <a href="#"><i class="fa fa-facebook icon" aria-hidden="true"></i></a> <a href="#" ><i class="fa fa-twitter icon" aria-hidden="true"></i></a> <a href="https://github.com/call-congress/ProjectFreedom"><i class="fa fa-github icon" aria-hidden="true"></i></a>  <a href="mailto:info@call-congress.com" ><i class="fa fa-envelope icon" aria-hidden="true"></i></a>
+                            </li>
+                            
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+            <!--mobile navbar-->
                 
             <div class="page">
                 {% block content %}{% endblock %}
@@ -74,9 +111,11 @@
         {% block js_script %}
         {% endblock %}
 
-        
+        <script>
+      
 
-    </body>
+    </script>
+
     </body>
     
 </html>
