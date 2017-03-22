@@ -150,6 +150,15 @@ p {
   display:none;
 }
 
+.flashes {
+  list-style: none;
+  padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
 /* ------------- CONTAINER DIVS ------------- */
 
 
@@ -384,6 +393,17 @@ li.uk-active {
   
   /* HOME PAGE */ 
 
+  .flashes {
+    color:#ff0000;
+    
+    text-align: left;
+    float: left;
+  }
+
+  .flashes li {
+    display: inline-block;
+  }
+
   body {
     background-color:#fff;
     background-image:none;
@@ -433,8 +453,8 @@ li.uk-active {
   }
 
   .make-a-call {
-    margin-top:75px;
     text-align:left;
+    margin-top:75px;
   }
 
   body .home-2 {
