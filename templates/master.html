@@ -24,7 +24,7 @@
             <!-- navbar -->
             <div class="uk-container"> 
                 <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar id="desktop-menu">
-                    <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo"><img src="{{ url_for('static', filename='images/logo.png') }}"> </a>
+                    <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo-white"></a>
                     <div class="uk-navbar-right">
                         <ul class="uk-navbar-nav" id="menubar">
                             <li class="uk-parent">
@@ -62,7 +62,7 @@
 
             <!--mobile navbar-->
             <div uk-toggle="target: #offcanvas-nav" id="mobile-menu">
-                <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo mobile-menu-logo"><img src="{{ url_for('static', filename='images/logo.png') }}"> </a> 
+                <a href="{{ url_for('index') }}" class="uk-navbar-item uk-logo mobile-menu-logo"> <img src="{{ url_for('static', filename='images/logo-blue.png') }}"> </a> 
                 <i class="fa fa-bars mobile-menu-icon" aria-hidden="true"></i></div>
             <div id="offcanvas-nav" uk-offcanvas="overlay: true">
                 <div class="uk-offcanvas-bar">
@@ -75,6 +75,11 @@
                             <li class="uk-parent">
                                 <a href="{{ url_for('index') }}">
                                     <div class="underline">Home</div>
+                                </a>
+                            </li>
+                            <li class="uk-parent">
+                                <a href="{{ url_for('index') }}">
+                                    <div class="underline">Make a Call</div>
                                 </a>
                             </li>
                             <li class="uk-parent">
@@ -128,8 +133,8 @@
              <div class="footer-container-mobile">
                  
                     <div class="uk-width-1-1">
-                        <a href="/legal" class="link">Privacy Policy</a><br><br><a href="{{ url_for('index') }}#call" class="link">Why Call?</a>
-                        <br><br><a href="{{ url_for('about') }}" class="link">Contact</a><br><br>
+                        <a href="{{ url_for('index') }}" class="link">Make a Call</a><br><br>
+                        <a href="/legal" class="link">Privacy Policy</a><br><br><a href="{{ url_for('about') }}" class="link">Contact</a><br><br>
                         <a href="#"><i class="fa fa-facebook icon" aria-hidden="true"></i></a> <a href="#" ><i class="fa fa-twitter icon" aria-hidden="true"></i></a> <a href="https://github.com/call-congress/ProjectFreedom"><i class="fa fa-github icon" aria-hidden="true"></i></a>  <a href="mailto:info@call-congress.com" ><i class="fa fa-envelope icon" aria-hidden="true"></i></a>
                     </div>
              </div>

@@ -146,6 +146,10 @@ p {
   padding:0px 0px 3px 5px!important;
 }
 
+.home-1-title-text {
+  display:none;
+}
+
 /* ------------- CONTAINER DIVS ------------- */
 
 
@@ -268,6 +272,9 @@ footer a:hover {
   border-bottom: 2px solid rgba(255, 0, 0, 1);
 }
 
+.logo-blue {
+  display:none;
+}
 
 
 /* ------------- ACTIVE NAVBAR LINK ------------- */
@@ -336,6 +343,7 @@ li.uk-active {
     margin-right:25px;
     margin-top:20px;
     cursor:pointer;
+    color:#0090ff;
   }
 
   .mobile-menu-close-icon {
@@ -376,24 +384,43 @@ li.uk-active {
   
   /* HOME PAGE */ 
 
-  .home-1 {
-    height:85vh!important;
-    padding-left:7%;
-    padding-right:7%;
+  body {
+    background-color:#fff;
+    background-image:none;
+    color:#0090ff;
+  }
+
+  body .home-1-title-text {
+    display:block;
+    color:#0090ff;
+    text-align:left;
+    margin:0;
+    width:100%;
+    margin-bottom:30px;
+  }
+
+  body .home-1 {
+    padding-left:5%;
+    padding-right:5%;
+    padding-bottom:40px;
+    background-color:#fff;
   }
 
   body .home-1-title {
     width:100%;
-    font-weight:normal;
+    font-weight:bold;
     text-shadow:none;
     text-align:left;
-    margin-bottom:30px;
+    color:#0090ff;
+    font-size:1.7em;
   }
 
   body .address input[type=text] {
-    width:97%!important;
+    width:100%!important;
     margin-top:0px;
     margin-bottom:15px;
+    border-color: #eee;
+    color:#0090ff;
   }
 
   body .state-dropdown {
@@ -401,11 +428,36 @@ li.uk-active {
     background: url(images/white-arrows.svg) no-repeat 98% 50%;
     background-size: 10px;
     float:left;
+    border-color: #eee;
+    color: #0090ff;
   }
 
   .make-a-call {
     margin-top:75px;
     text-align:left;
+  }
+
+  body .home-2 {
+    padding-bottom:0;
+    background-color:#f9f9f9;
+    padding-top:10px;
+  }
+
+  * + [class*='uk-align'] {
+    margin:0 5% 0 5%;
+    width:90%;
+  }
+
+  h2 {
+   padding-top:40px;
+   font-size:1.5em;
+   margin-bottom:20px;
+  }
+
+  .heading {
+    padding-bottom:0px;
+    display:inline-block;
+    margin-top:0;
   }
 
   .uk-grid > * {
@@ -429,9 +481,147 @@ li.uk-active {
     margin-top:0;
   }
 
-  .uk-card-body {
-    padding: 30px 0px 30px 30px;
-}
+  body .uk-card-body {
+    padding: 0px 0px 30px 30px;
+    background-color:#f9f9f9;
+  }
+
+  .logo-white {
+    display:none;
+  }
+
+  .logo-blue {
+    display:block;
+  }
+
+  body .address ::-webkit-input-placeholder {
+    color: #0090ff;
+    text-transform:uppercase;
+  }
+
+  body .address :-moz-placeholder { /* Firefox 18- */
+    color: #0090ff;
+    text-transform:uppercase;
+  }
+
+  body .address ::-moz-placeholder {  /* Firefox 19+ */
+    color: #0090ff;
+    text-transform:uppercase;
+  }
+
+  body .address :-ms-input-placeholder {  
+     color: #0090ff;
+     text-transform:uppercase;
+  }
+
+  /* DATA PAGE */
+
+  body .mobile-dropdown {
+    display:block;
+    font-size:1.1;
+    width:100%;
+    background-color:#f9f9f9;
+    padding:10px;
+    margin-bottom:20px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-weight:bold;
+  }
+
+  h5 {
+    display:none;
+  }
+
+  h3 {
+   
+    
+  }
+
+  a:hover {
+    text-decoration:none;
+    color:#ff0000;
+  }
+
+
+  body .uk-grid {
+    margin-left:0;
+  }
+
+  .transparent-white {
+    padding:5%;
+  }
+
+  body .issues-text {
+    color:#494949;
+  }
+
+  .how-to {
+    
+  }
+
+  .what-to-say {
+    display:none;
+  }
+
+  body .rep-name {
+    background-color:#fff;
+  }
+
+  body .phone-numbers {
+    height:auto;
+    padding-bottom:40px;
+  }
+
+  table {
+    width: 100%;
+    text-align: left;
+    background-color: #ffffff;
+  }
+
+  body .issue {
+    padding: 8px 8px 8px 8px;
+    width:48%;
+  }
+
+  h5 {
+    text-align:left;
+  }
+  
+  body .gray-box {
+    padding:5%!important;
+    height:72%;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .unhidden {
+    display:block;
+  }
+
+  .mobile-dropdown {
+    display:block;
+    width:100%;
+  }
+
+  .padding-bottom-large {
+    padding-bottom:0;
+  }
+
+  body .mobile-instruction {
+    display:block;
+  }
+
+  /* ABOUT */
+
+  .mobile-p {
+    padding-bottom:40px;
+  }
+
+  p {
+    margin-bottom:0px;
+  }
 
   /* FOOTER */
 
@@ -448,16 +638,8 @@ li.uk-active {
     height:150px;
   }
 
-  body {
-    background: url(static/images/bg.png) no-repeat center center fixed;
-  }
-
   .page {
     padding-bottom:150px;
-  }
-
-  body .home-2 {
-    padding-bottom:0;
   }
 
 
@@ -489,7 +671,7 @@ li.uk-active {
 
 .home-1 {
   text-align:center;
-  height:450px;
+  padding-bottom:200px;
   padding-top:10%;
 }
 
@@ -720,6 +902,14 @@ li.uk-active {
 
 
 /* ------------- SCRIPTS PAGE ------------- */
+
+.mobile-dropdown {
+  display:none;
+}
+
+.mobile-instruction {
+  display:none;
+}
 
 .issues-text {
   margin-top:20px;
