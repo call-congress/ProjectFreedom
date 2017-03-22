@@ -4,21 +4,22 @@
 
 
     	<div class="transparent-white padding-bottom-large">
-    		<div class="uk-grid issues-text"> 			
-    			<div class="uk-width-1-3">
-                <h3 class="center padding-bottom-medium">How to Make a Call</h3>
+    		<div class="uk-grid issues-text">
+
+            <a href="javascript:unhide('instructions');" class="mobile-dropdown">Instructions <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+
+    		  <div class="uk-width-1-3@m how-to" id="instructions" class="hidden">
+                <h3 class="center padding-bottom-medium hidden">How to Make a Call</h3>
                     <div class="gray-box">
-                        
                         <ol>
                             <li>Be sure to call local offices instead of just the DC office. There are staffers in local offices whose responsibility it is to respond to constituents.</li>
                             <li>Leave a message if you can’t speak to somebody. If all inboxes are full/phone lines down, try another office. If you can't leave your message at all by phone, send an email, then call back another day.</li>
                             <li>Set aside time to make calls daily/weekly. Persistence is highly effective.</li>
+                            <li class="mobile-instruction">Briefly explain why you are calling about the issue. We've provided effective examples below if you're unsure of what to say.  If you have personal/professional experience with the issue, make sure to mention it. You can also call to ask where your rep stands on an issue, or simply call to thank them for their support.</li>
                         </ol>
                     </div>
-             
-
                 </div>
-                <div class="uk-width-2-3">
+                <div class="uk-width-2-3@m what-to-say">
                 <h3 class="center padding-bottom-medium">What to Say</h3>
                     <div class="gray-box">
 	                	<ol>
@@ -32,8 +33,11 @@
     			</div>
     		</div>
 
+            
 		    <div uk-grid class="margin-top-none">
-		    	<div class="uk-width-1-3@m">
+
+            <a href="javascript:unhide('phones');" class="mobile-dropdown">Phone Numbers <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+		    	<div class="uk-width-1-3@m hidden" id="phones">
 				    <div class="phone-numbers">
 						<h5 class="center">Your Legislators</h5>
 						<table class="cellpadding">
@@ -71,7 +75,9 @@
 					</div>
 				</div><!--uk width 1-3-->
 
-				<div class="uk-width-2-3@m">
+
+                <a href="javascript:unhide('scripts');" class="mobile-dropdown">Scripts <i class="fa fa-caret-down" aria-hidden="true"></i></a>
+				<div class="uk-width-2-3@m hidden" id="scripts">
                 <h5 class="center">SCRIPTS</h5>
                     <div>
                         <div class="issues-top">
@@ -88,7 +94,7 @@
                                 <button class="issue" aria-hidden="true">Wall St</button>
                                 <button class="issue" aria-hidden="true">Women's Rights</button>
                                 <button class="issue" aria-hidden="true">Other</button>
-                                <button class="issue" aria-hidden="true">Request a script</button>
+                                <button class="issue" aria-hidden="true">Request</button>
                             <!-- DROPDOWNS -->
                                 <div class="issue-content">
                                     <div>
@@ -398,6 +404,13 @@ $(document).ready(function() {
         });
     });
 });
+
+function unhide(divID) {
+    var item = document.getElementById(divID);
+    if (item) {
+      item.className=(item.className=='hidden')?'unhidden':'hidden';
+    }
+  }
 
 </script>
 

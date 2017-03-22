@@ -4,6 +4,11 @@
 
 
 		<div class="home-1">
+
+			<div class="home-1-title">Don't let lawmakers make decisions on your behalf without making your voice heard.</div>
+			<p class="home-1-title-text">Enter your address below to begin. We provide you with the phone numbers of your Senators and House Representative as well of suggested scripts if you're unsure of what to say.</p>
+
+
 			<div class="home-1-title">
 			Don't let lawmakers make decisions on your behalf without making your voice heard.
 			</div>
@@ -12,6 +17,7 @@
      					 <li>{{ error }}</li>
 					{%endif%}
 				</ul>
+
 			<div class="address"><form action = "{{url_for('data')}}" method = "post" class="address">
 			<input type="text" name="street" placeholder="Street Address" required>
 			<input type="text" name="city" placeholder="City" class="city-width" required>
@@ -89,7 +95,8 @@
 				    <div>
 				        <div class="uk-card uk-card-default uk-card-body">
 				        <img src="../static/images/2.png">
-				        <h3 class="card-h3">Know Where Your Rep Stands</h3> <p>Make sure to know where your representative stands on issues and call effectively based on those stances. If they haven't taken a stand, you can let them know you expect them to.</p></div>
+				        <h3 class="card-h3">Where Your Rep Stands</h3> 
+				        <p>Make sure to know where your representative stands on issues and call effectively based on those stances. If they haven't taken a stand, you can let them know you expect them to.</p></div>
 				    </div>
 				    <div>
 				        <div class="uk-card uk-card-default uk-card-body">
