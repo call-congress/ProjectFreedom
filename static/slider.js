@@ -21,8 +21,8 @@
       settings: {
         arrows: true,
         slidesToShow: 1,
-        slidesToScroll: 2,
-        initialSlide: 6
+        slidesToScroll: 1,
+        initialSlide: 5
       }
     }
     
