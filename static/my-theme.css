@@ -79,6 +79,10 @@ h6 {
   margin-bottom:!important;
 }
 
+#event-title-mobile {
+  display:none;
+}
+
 .red:hover {
     color:#ff0000!important;
 }
@@ -393,8 +397,6 @@ li.uk-active {
   padding-top:50px;
 }
 
-
-  
   /* HOME PAGE */ 
 
   .flashes {
@@ -439,26 +441,28 @@ li.uk-active {
     font-size:1.7em;
   }
 
-  body .address input[type=text] {
-    width:100%!important;
-    margin-top:0px;
-    margin-bottom:15px;
+  body .address input[type=text],.address-bottom input[type=text]  {
+    width:90%!important;
+    margin-top:0px!important;
+    margin-bottom:15px!important;
     border-color: #eee;
     color:#0090ff;
+    float:left;
   }
 
-  body .state-dropdown {
-    width:50%;
-    background: url(images/white-arrows.svg) no-repeat 98% 50%;
+  body .state-dropdown,.state-dropdown-bottom {
+    width:50%!important;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NDQ0NDQ7fQo8L3N0eWxlPgo8dGl0bGU+YXJyb3dzPC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxLjQsNC43IDIuNSwzLjIgMy41LDQuNyAiLz4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4KPC9zdmc+Cg==) no-repeat 100% 100%!important;
     background-size: 10px;
     float:left;
     border-color: #eee;
     color: #0090ff;
+    margin-bottom:15px;
   }
 
   .make-a-call {
     text-align:left;
-    margin-top:75px;
+    margin-top:50px;
   }
 
   body .home-2 {
@@ -475,13 +479,27 @@ li.uk-active {
   h2 {
    padding-top:40px;
    font-size:1.5em;
-   margin-bottom:20px;
   }
 
   .heading {
     padding-bottom:0px;
-    display:inline-block;
     margin-top:0;
+  }
+
+  .inline-block {
+    display:inline-block;
+  }
+
+  .margin-bottom-mobile {
+    margin-bottom:40px;
+  }
+
+  .margin-bottom-small-mobile {
+    margin-bottom:20px;
+  }
+
+  .padding-top {
+    padding-top:0;
   }
 
   .uk-grid > * {
@@ -506,7 +524,7 @@ li.uk-active {
   }
 
   body .uk-card-body {
-    padding: 0px 0px 30px 30px;
+    padding: 0px 0px 30px 5px;
     background-color:#f9f9f9;
   }
 
@@ -558,7 +576,6 @@ li.uk-active {
 
   h3 {
    
-    
   }
 
   a:hover {
@@ -665,6 +682,52 @@ li.uk-active {
   .page {
     padding-bottom:150px;
   }
+
+  /* EVENTS PAGE */
+
+  body .home-2-bottom {
+    background-color:#f9f9f9!important;
+    background:none;
+    padding-left:30px;
+    padding-right:30px;
+    padding-bottom:75px;
+  }
+
+  .your-class {
+    width:80%;
+    margin:0 auto;
+  }
+
+  .make-a-call input[type=submit] {
+    clear: both;
+    display: block;
+  }
+
+  .events-heading {
+    font-weight:bold;
+  color:#494949;
+  font-size:1.1em;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  margin-bottom:0px;
+  }
+
+  body #event-title {
+    display:none;
+  }
+
+  body #event-title-mobile {
+    display:block;
+    text-align: center;
+    margin-top: 40px;
+    color:#494949;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:1.1em;
+}
+  }
+
 
 
 }
