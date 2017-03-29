@@ -840,7 +840,7 @@ li.uk-active {
 }
 
 .address input[type=text] {
-  background-color:transparent;
+  background-color:rgba(255, 255, 255);
   border:2px solid #fff;
   border-radius:5px;
   width:20%;
@@ -849,30 +849,30 @@ li.uk-active {
   margin-bottom:30px;
   padding:6px;
   padding-left:10px;
-  color:#fff;
+  color:#494949;
 }
 
 .address ::-webkit-input-placeholder
  {
-   color: #fff;
+   color: #999;
   text-transform:uppercase;
 
 }
 
 .address :-moz-placeholder { /* Firefox 18- */
-   color: #fff;
+   color: #999;
    text-transform:uppercase;
 
 }
 
 .address ::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;
+   color: #999;
  text-transform:uppercase;
 
 }
 
 .address :-ms-input-placeholder {  
-   color: #fff;
+   color: #999;
    text-transform:uppercase;
 
 }
@@ -898,15 +898,16 @@ li.uk-active {
 
 .state-dropdown {
   border:2px solid #fff;
-  background-color:transparent;
-  color:#fff;
+  background-color:#fff;
+  color:#999;
   width:150px;
   height:38px;
   -webkit-appearance:none;
-  background: url("images/white-arrows.svg") no-repeat 95% 50%;
-  background-size:5%;
+  background: #fff url(images/form-select.svg) no-repeat 98% 50%;
+  background-size: 10%;
   padding-left:10px;
   padding-right:20px;
+  text-transform:uppercase;
 }
 
 .state-dropdown:focus {
