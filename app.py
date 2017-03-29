@@ -112,7 +112,7 @@ def data():
                                    senator_2_url = senator_2_url, senator_2_name = senator_2_name,
                                    senator_2_offices = senator_2_offices)
     except KeyError or IndexError:
-        error = "Please enter a valid adress"
+        error = "Please enter a valid address"
         return render_template("index.html", error = error)
 
 if __name__ == '__main__':
