@@ -428,7 +428,7 @@ li.uk-active {
   body .home-1 {
     padding-left:5%;
     padding-right:5%;
-    padding-bottom:40px;
+    padding-bottom:75px;
     background-color:#fff;
   }
 
@@ -448,6 +448,8 @@ li.uk-active {
     border-color: #eee;
     color:#0090ff;
     float:left;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 
   body .state-dropdown,.state-dropdown-bottom {
@@ -681,6 +683,10 @@ li.uk-active {
 
   .page {
     padding-bottom:150px;
+  }
+
+  .padding-left-mobile {
+    padding-left:11px;
   }
 
   /* EVENTS PAGE */
