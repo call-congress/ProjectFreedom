@@ -1012,7 +1012,7 @@ li.uk-active {
 .gray-box {
   background-color:#f7f7f7;
   padding:40px;
-  height:63%;
+  height:69%;
 }
 
 .boxes {
@@ -1191,6 +1191,11 @@ ol li:before {
 .phone-numbers {
   height:auto;
   padding-bottom:100px;
+  padding-top:35px;
+}
+
+#scripts {
+  padding-top:35px;
 }
 
 .rep-name {
